@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="1189 16 362 362">
+<g id="thermal-cycle" fill="none" stroke-width="29" stroke-linecap="butt">
+    <path d="M1209,178 A162,162 0 0 1 1531,178" stroke="#F6A21A"/>
+    <path d="M1209,216 A162,162 0 0 0 1531,216" stroke="#13A8B7"/>
+  </g>
+  <path id="photon-wavepacket" d="M1235,198
+    C1254,198 1258,158 1278,158
+    C1298,158 1300,258 1320,258
+    C1340,258 1342,102 1370,102
+    C1398,102 1400,258 1420,258
+    C1440,258 1442,158 1462,158
+    C1482,158 1486,198 1505,198"
+    fill="none" stroke="currentColor" stroke-width="10.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

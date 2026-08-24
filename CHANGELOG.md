@@ -1,0 +1,41 @@
+# Changelog — Carnot 2026 workshop site
+
+Bump the version in three places when you change the site:
+`index.html` header comment, the footer line (`class="ver"`), and here.
+
+## v0.5 — 24 August 2026
+- Logo replaced with the true vector master (brand/carnot-logo.svg); the hero,
+  nav mark and footer are now resolution-independent
+- Brand colours corrected to the official values: navy #0A2448, teal #13A8B7,
+  amber #F6A21A (previously sampled approximations from a raster)
+- Footer no longer ships two themed PNG lockups — one vector inherits the theme
+- Favicon regenerated from the vector mark
+- Page ~40 KB lighter
+
+## v0.4 — 24 August 2026
+- Program: format chips added (talks, flash talks, posters, round-table,
+  funding session, lab tours) so the range of the program reads at a glance
+- Venue: New Mexico written up properly — the light, the altitude, late October
+- New "If you can stay an extra day" block: Sandia Peak Tramway, the VLA,
+  Santa Fe and Los Alamos, and the state question
+
+## v0.3 — 24 August 2026
+- Travel details corrected and expanded: Sunport is 10 minutes from Hotel Parq
+  Central, which runs a complimentary airport shuttle 7:30 am – 10:30 pm
+- Route between hotel and PAIS added: free 777 Express bus, or a 25-minute walk
+- Removed the unverified "15 minutes from campus" airport estimate
+
+## v0.2 — 23 August 2026
+- Arash Mafi corrected to University of Kansas
+- Peter Pauzauskie corrected to University of Washington (PNNL removed)
+- PAIS street address added: 210 Yale Boulevard NE, Albuquerque, NM 87106
+- Hotel Parq Central street address added: 806 Central Avenue SE, Albuquerque, NM 87102
+- Map links added: PAIS, Hotel Parq Central, and hotel-to-PAIS directions
+- Speakers heading changed from a fixed count to "Confirmed speakers"
+- Organizing committee heading simplified
+- Version tracking introduced
+
+## v0.1 — 23 August 2026
+- Initial site: hero, premise, tentative program, speakers with portraits,
+  poster session, venue and travel, organizing committee, sponsors
+- Published unlisted at https://carnot-workshop.github.io/
