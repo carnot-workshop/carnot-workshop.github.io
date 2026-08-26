@@ -3,6 +3,31 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
+## v0.9 — 26 August 2026
+- PAIS 1010 also has a glass wall onto the inner courtyard — added to the room
+  description; the courtyard photo is the view from inside the workshop room
+
+## v0.8 — 26 August 2026
+- Corrected: PAIS 1010 has TWO walls of whiteboard, not three
+- Posters are in PAIS 1010 with the talks, not the atrium — captions and the
+  poster section corrected
+- Third photo renamed and recaptioned: it is the inner courtyard, framed as
+  somewhere to take the breaks outdoors in late October
+
+## v0.7 — 24 August 2026
+- Real photographs of PAIS replace the drawn illustration (own work, no
+  licensing question): exterior on the venue block, plus a three-image gallery
+  of the atrium, PAIS 1010 and the courtyard break-out space
+- Room specification added: PAIS 1010, 40 seats, three walls of whiteboard,
+  large projection screen
+- Photo credit added to the footer
+- Photos ship as separate files under photos/ and load lazily, so the page
+  itself stays light
+
+## v0.6 — 24 August 2026
+- Copyright line added to the footer, with an explicit carve-out for speaker
+  portraits (which belong to the speakers and their institutions, not us)
+
 ## v0.5 — 24 August 2026
 - Logo replaced with the true vector master (brand/carnot-logo.svg); the hero,
   nav mark and footer are now resolution-independent

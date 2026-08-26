@@ -20,7 +20,7 @@
 <!-- ===== SITE VERSION =====================================================
      Bump this on every content change, and update the matching line in the
      footer (search: class="ver") and the entry in CHANGELOG.md.
-     CURRENT: v0.5 — 24 August 2026
+     CURRENT: v0.9 — 26 August 2026
      ====================================================================== -->
 <title>Carnot 2026 Workshop</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -206,8 +206,12 @@ section{padding:88px 0}
 
 /* ---------- VENUE ---------- */
 .venue-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:56px; align-items:center}
-.venue-art{border:1px solid var(--line); border-radius:3px; overflow:hidden; background:var(--surface-2)}
-.venue-art svg{display:block; width:100%; height:auto}
+.venue-art{border:1px solid var(--line); border-radius:3px; overflow:hidden; background:var(--surface-2); margin:0}
+.venue-art img{display:block; width:100%; height:auto}
+.gallery{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:22px}
+.gallery figure{margin:0}
+.gallery img{display:block; width:100%; height:auto; border:1px solid var(--line); border-radius:3px; background:var(--surface-2)}
+.gallery figcaption{font-size:13.5px; line-height:1.5; color:var(--muted); margin-top:10px}
 .vlist{margin:26px 0 0; padding:0; list-style:none; border-top:1px solid var(--line)}
 .vlist li{display:grid; grid-template-columns:132px 1fr; gap:18px; padding:13px 0; border-bottom:1px solid var(--line); font-size:15px; align-items:baseline}
 .vlist li div{line-height:1.55}
@@ -234,6 +238,7 @@ section{padding:88px 0}
 .org span{font-size:13.5px; color:var(--muted)}
 footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted); font-size:13.5px}
 .ver{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11.5px; letter-spacing:.06em; margin-top:4px}
+.legal{font-size:12px; line-height:1.5; color:var(--muted); max-width:52ch; margin-top:12px}
 .foot{display:flex; justify-content:space-between; gap:26px; flex-wrap:wrap; align-items:flex-end}
 .note{font-size:12.5px; color:var(--muted); margin-top:14px; font-style:italic}
 
@@ -558,7 +563,7 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
     <div class="sec-head">
       <p class="eyebrow">Students and postdocs</p>
       <h2>Poster session, with prizes</h2>
-      <p>Around twelve posters are expected, drawn from the speakers&rsquo; groups, from UNM&rsquo;s Center for High Technology Materials, and from the national laboratories. The session has its own ninety-minute block on Day One with a reception, introduced by flash talks in which every presenter gets two minutes and one slide.</p>
+      <p>Around twelve posters are expected, drawn from the speakers&rsquo; groups, from UNM&rsquo;s Center for High Technology Materials, and from the national laboratories. Posters go up in PAIS 1010 alongside the talks, and the session has its own ninety-minute block on Day One with a reception, introduced by flash talks in which every presenter gets two minutes and one slide.</p>
     </div>
     <p class="prose">Poster prizes are awarded at the workshop dinner, and the winners are invited to give short talks in Sunday&rsquo;s contributed session.</p>
   </div>
@@ -576,6 +581,7 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
       </div>
       <ul class="vlist">
         <li><span>Venue</span><div>Physics, Astronomy and Interdisciplinary Science (PAIS) Building<br>210 Yale Boulevard NE, Albuquerque, NM 87106<br>University of New Mexico main campus &mdash; northeast corner of Yale and Redondo</div></li>
+        <li><span>Room</span><div>PAIS 1010 &mdash; 40 seats, two walls of whiteboard, a large projection screen, and a glass wall onto the inner courtyard.</div></li>
         
         <li><span>Lodging</span><div>Hotel Parq Central<br>806 Central Avenue SE, Albuquerque, NM 87102<br>Block held at the UNM rate for invited speakers and international guests</div></li>
         <li><span>From the airport</span><div>Albuquerque International Sunport (ABQ) is 10 minutes from the hotel. Hotel Parq Central runs a complimentary airport shuttle, 7:30&nbsp;am&ndash;10:30&nbsp;pm.</div></li>
@@ -588,70 +594,19 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel%20Parq%20Central%2C%20806%20Central%20Ave%20SE%2C%20Albuquerque%2C%20NM%2087102&amp;destination=210%20Yale%20Blvd%20NE%2C%20Albuquerque%2C%20NM%2087106" target="_blank" rel="noopener">Directions, hotel to PAIS</a>
       </div>
     </div>
-    <div class="venue-art">
-      <svg viewBox="0 0 520 380" role="img" aria-label="Illustration of the PAIS building below the Sandia mountains under a bright New Mexico sky, with hot-air balloons overhead.">
-        <defs>
-          <linearGradient id="vsky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#1F62B4"/>
-            <stop offset=".42" stop-color="#5E9BDB"/>
-            <stop offset=".74" stop-color="#A9CDEB"/>
-            <stop offset="1" stop-color="#DCEAF3"/>
-          </linearGradient>
-          <radialGradient id="vsun" cx=".5" cy=".5" r=".5">
-            <stop offset="0" stop-color="#FFFBE4" stop-opacity=".95"/>
-            <stop offset="1" stop-color="#FFF6CE" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <rect width="520" height="380" fill="url(#vsky)"/>
-        <circle cx="424" cy="62" r="96" fill="url(#vsun)"/>
-        <circle cx="424" cy="62" r="15" fill="#FFFDF0" opacity=".95"/>
-
-        <g fill="#FFFFFF" opacity=".55">
-          <circle cx="118" cy="196" r="15"/><circle cx="140" cy="203" r="11"/><circle cx="98" cy="204" r="10"/>
-          <circle cx="330" cy="176" r="11"/><circle cx="346" cy="182" r="8"/>
-        </g>
-
-        <path d="M0 232 L70 190 L126 218 L198 166 L254 210 L318 172 L384 216 L450 186 L520 222 L520 380 L0 380 Z" fill="#93A3CA" opacity=".55"/>
-        <path d="M0 264 L86 232 L160 258 L242 226 L322 260 L406 232 L520 262 L520 380 L0 380 Z" fill="#A67D63" opacity=".9"/>
-        <path d="M0 292 L104 272 L206 290 L300 268 L400 292 L520 274 L520 380 L0 380 Z" fill="#7C4E33"/>
-
-        <g>
-          <rect x="96" y="292" width="196" height="66" fill="#E6DED0"/>
-          <rect x="96" y="292" width="196" height="7" fill="#C6BAA6"/>
-          <rect x="292" y="270" width="118" height="88" fill="#EFE8DC"/>
-          <rect x="292" y="270" width="118" height="7" fill="#C6BAA6"/>
-          <rect x="60" y="314" width="36" height="44" fill="#D8CEBC"/>
-        </g>
-        <g fill="#5E8FC4">
-          <rect x="112" y="308" width="13" height="17"/><rect x="135" y="308" width="13" height="17"/>
-          <rect x="158" y="308" width="13" height="17"/><rect x="181" y="308" width="13" height="17"/>
-          <rect x="204" y="308" width="13" height="17"/><rect x="227" y="308" width="13" height="17"/>
-          <rect x="250" y="308" width="13" height="17"/>
-          <rect x="308" y="288" width="13" height="17"/><rect x="331" y="288" width="13" height="17"/>
-          <rect x="354" y="288" width="13" height="17"/><rect x="377" y="288" width="13" height="17"/>
-          <rect x="112" y="334" width="13" height="17"/><rect x="158" y="334" width="13" height="17"/>
-          <rect x="227" y="334" width="13" height="17"/>
-          <rect x="308" y="316" width="13" height="17"/><rect x="354" y="316" width="13" height="17"/>
-        </g>
-        <g fill="#E8B45C">
-          <rect x="135" y="334" width="13" height="17"/><rect x="250" y="334" width="13" height="17"/>
-          <rect x="331" y="316" width="13" height="17"/>
-        </g>
-
-        <g>
-          <ellipse cx="108" cy="92" rx="26" ry="30" fill="#F6A21A"/>
-          <path d="M100 118 L108 130 L116 118 Z" fill="#5C3A1E" opacity=".7"/>
-          <rect x="103" y="130" width="10" height="8" fill="#5C3A1E"/>
-          <ellipse cx="216" cy="140" rx="17" ry="20" fill="#F6A21A"/>
-          <path d="M211 158 L216 167 L221 158 Z" fill="#5C3A1E" opacity=".7"/>
-          <rect x="212.5" y="167" width="7" height="5" fill="#5C3A1E"/>
-          <ellipse cx="466" cy="140" rx="12" ry="14" fill="#F6A21A"/>
-          <rect x="463" y="158" width="6" height="4" fill="#5C3A1E"/>
-        </g>
-      </svg>
-    </div>
+    <figure class="venue-art"><img src="photos/pais-exterior.jpg" alt="The PAIS building at the University of New Mexico" width="1500" height="843" loading="lazy"></figure>
   </div>
   <div class="wrap">
+    <p class="subhead2">The building</p>
+    <div class="gallery">
+      <figure><img src="photos/pais-atrium.jpg" alt="The PAIS atrium" width="1000" height="562" loading="lazy">
+        <figcaption>The atrium. Arrival, coffee, and the conversations that happen between sessions.</figcaption></figure>
+      <figure><img src="photos/pais-1010.jpg" alt="PAIS 1010, the workshop room" width="1000" height="562" loading="lazy">
+        <figcaption>PAIS 1010. Forty seats, two walls of whiteboard, one large screen. Talks and posters both live here.</figcaption></figure>
+      <figure><img src="photos/pais-courtyard.jpg" alt="The inner courtyard seen through the glass wall of PAIS 1010" width="1000" height="562" loading="lazy">
+        <figcaption>The same room looks onto the inner courtyard. Late October in Albuquerque is warm enough to take the breaks outside.</figcaption></figure>
+    </div>
+
     <p class="subhead2">If you can stay an extra day</p>
     <div class="extras">
       <div><b>Sandia Peak Tramway</b><span>From the edge of the city to 10,378 feet in fifteen minutes &mdash; a rise of 3,819 feet, and the longest aerial tram in the Americas.</span></div>
@@ -690,10 +645,11 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
     <div>
       <svg class="foot-logo" viewBox="0 0 1800 486" role="img" aria-label="Carnot — Photonic Heat Engines"><use href="#lg"/></svg>
       <p style="max-width:46ch">24–25 October 2026 · PAIS Building, University of New Mexico, Albuquerque, New Mexico.</p>
+      <p class="legal">&copy; 2026 Carnot Workshop. Photographs of PAIS by Denis Seletskiy. Speaker portraits reproduced with permission and remain the property of their respective owners.</p>
     </div>
     <div style="text-align:right">
       <p>Program and speaker list are provisional.</p>
-      <p class="ver">Version 0.5 &middot; 24 August 2026</p>
+      <p class="ver">Version 0.9 &middot; 26 August 2026</p>
     </div>
   </div>
 </footer>
