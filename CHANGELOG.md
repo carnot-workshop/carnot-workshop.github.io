@@ -3,6 +3,19 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
+## v0.11 — 26 August 2026
+- Portraits added for Dragic, Fattahi and Ghonge; all twelve speaker cards now
+  carry a photograph, no initials placeholders remain
+
+## v0.10 — 26 August 2026
+- Three confirmed speakers added: Peter Dragic (Illinois), Hanieh Fattahi
+  (Max Planck Institute for the Science of Light), Sushrut Ghonge (Saint Mary's)
+- New Session VI, "Pumping with incoherent light", placed on Day Two morning —
+  sun-pumped radiation-balanced lasers, and cooling with broadband light
+- Day Two rebuilt around it: session at 09:30, contributed talks 11:15,
+  roadmap 12:00, adjourn 14:00
+- Program now twelve invited talks, not nine
+
 ## v0.9 — 26 August 2026
 - PAIS 1010 also has a glass wall onto the inner courtyard — added to the room
   description; the courtyard photo is the view from inside the workshop room
