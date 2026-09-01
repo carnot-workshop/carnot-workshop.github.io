@@ -3,6 +3,14 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
+## v0.12 — 1 September 2026
+- New confirmed speaker: Michel Digonnet (Stanford), speaking on
+  radiation-balanced lasers; card added with portrait
+- Session III (Radiation-balanced lasers) extended to 3 × 30 min; Day One
+  afternoon shifted by 30 minutes — Session IV at 14:30, coffee 15:30,
+  round-table 16:00, flash talks 17:00, posters 17:30–19:00, dinner 19:00
+- Talks renumbered: thirteen invited talks, Day Two now Talks 11–13
+
 ## v0.11 — 26 August 2026
 - Portraits added for Dragic, Fattahi and Ghonge; all twelve speaker cards now
   carry a photograph, no initials placeholders remain
