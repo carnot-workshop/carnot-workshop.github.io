@@ -3,6 +3,43 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
+## v0.16 — 4 September 2026
+- Page reordered: Speakers now comes before the Tentative program, with the
+  Sponsors panel between them. The program then runs into the poster session
+  and the venue, so the room photographs follow naturally from the schedule
+- Section backgrounds re-balanced to keep the tinted/white alternation intact
+  (Speakers on tint, Sponsors on white); the program keeps the tinted ground
+  its white day cards need for contrast
+- Navigation reordered to match
+
+## v0.15 — 4 September 2026
+- Format fact no longer states a headcount: "~30 people" became
+  "discussion-focused". The number read as a cap on attendance and also
+  contradicted PAIS 1010's 40 seats; room capacity now lives only in the
+  venue section, where it belongs as a fact about the room
+
+## v0.14 — 4 September 2026
+- Hero now uses the empty right side on wide screens: "Organized by" (the four
+  committee members) and "Sponsored by" with the Maxwell Labs logo on a navy
+  chip linking to the sponsors section; hidden below 1200px where the space
+  does not exist
+- Sponsors section moved up the page, from second-to-last to directly after
+  the speakers; "Sponsors" added to the navigation
+
+## v0.13 — 4 September 2026
+- Fourteenth invited talk reserved for Maxwell Labs (speaker TBA); card added
+  to the speakers grid, Session IV extended to 3 × 30 min, Day One afternoon
+  shifted by 30 minutes (round-table 16:30, posters 18:00–19:30, dinner 19:30)
+- Alejandro Rodriguez (Princeton / Maxwell Labs) added to the organizing
+  committee
+- Local organizing committee added: Alexander Albrecht, Max Gardner,
+  Morteza Darvishi (all UNM)
+- Sponsors section rebuilt: Maxwell Labs as workshop sponsor with logo, UNM
+  Physics & Astronomy and SELA Photonics under "With support from"; logo
+  masters added under brand/
+- SELA Photonics credited as sponsor of the poster prizes in the posters
+  section
+
 ## v0.12 — 1 September 2026
 - New confirmed speaker: Michel Digonnet (Stanford), speaking on
   radiation-balanced lasers; card added with portrait
