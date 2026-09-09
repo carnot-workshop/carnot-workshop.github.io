@@ -15,7 +15,7 @@
 <!-- ===== SITE VERSION =====================================================
      Bump this on every content change, and update the matching line in the
      footer (search: class="ver") and the entry in CHANGELOG.md.
-     CURRENT: v0.24 — 9 September 2026
+     CURRENT: v0.27 — 9 September 2026
      ====================================================================== -->
 <title>Carnot 2026 Workshop</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -264,17 +264,32 @@ section{padding:88px 0}
 .prize .lbl{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); margin-top:9px}
 
 /* ---------- VENUE ---------- */
-.venue-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:56px; align-items:center}
+.venue-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:56px; align-items:start}
+.venue-art{margin:0; display:grid; gap:22px}
+.venue-art figure{margin:0}
+.venue-art img{display:block; width:100%; height:auto; border:1px solid var(--line); border-radius:3px; background:var(--surface-2)}
+.venue-art figcaption{font-size:13.5px; line-height:1.5; color:var(--muted); margin-top:10px}
+.venue-pair{display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:start}
+@media (max-width:900px){.venue-pair{grid-template-columns:1fr}}
 .venue-art{border:1px solid var(--line); border-radius:3px; overflow:hidden; background:var(--surface-2); margin:0}
 .venue-art img{display:block; width:100%; height:auto}
 .gallery{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:22px}
 .gallery figure{margin:0}
 .gallery img{display:block; width:100%; height:auto; border:1px solid var(--line); border-radius:3px; background:var(--surface-2)}
 .gallery figcaption{font-size:13.5px; line-height:1.5; color:var(--muted); margin-top:10px}
+.gallery.quad{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1000px){.gallery.quad{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.gallery.quad{grid-template-columns:1fr}}
 .vlist{margin:26px 0 0; padding:0; list-style:none; border-top:1px solid var(--line)}
 .vlist li{display:grid; grid-template-columns:132px 1fr; gap:18px; padding:13px 0; border-bottom:1px solid var(--line); font-size:15px; align-items:baseline}
 .vlist li div{line-height:1.55}
 .formats{display:flex; flex-wrap:wrap; gap:9px; margin-top:26px}
+.prog-head{display:grid; grid-template-columns:minmax(0,62ch) minmax(0,1fr); gap:56px; align-items:start; margin-bottom:44px}
+.prog-head .sec-head{margin-bottom:0}
+.prog-shot{margin:0}
+.prog-shot img{display:block; width:100%; height:auto; border:1px solid var(--line); border-radius:3px; background:var(--surface-2)}
+.prog-shot figcaption{font-size:13.5px; line-height:1.5; color:var(--muted); margin-top:10px}
+@media (max-width:1000px){.prog-head{grid-template-columns:1fr; gap:34px}}
 .formats span{font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.09em; text-transform:uppercase;
   padding:7px 13px; border:1px solid var(--line); border-radius:100px; color:var(--ink-2); background:var(--surface)}
 .subhead2{font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase;
@@ -639,6 +654,7 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
 
 <section id="program">
   <div class="wrap">
+    <div class="prog-head">
     <div class="sec-head">
       <h2>Tentative program</h2>
       <p>Draft as of 4 September 2026. Session themes run along the thermal axis: rare-earth cooling, semiconductor cooling, radiation-balanced lasers, then high-power sources and applications. Talks will be assigned to slots once the program is settled.</p>
@@ -646,6 +662,9 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <span>Fourteen invited talks</span><span>Flash talks</span><span>Poster session, with prizes</span>
         <span>Round-table discussion</span><span>Community roadmap and funding session</span><span>Laboratory tours</span>
       </div>
+    </div>
+      <figure class="prog-shot"><img src="photos/pais-1010.jpg" alt="PAIS 1010, the workshop room" width="1000" height="562" loading="lazy">
+        <figcaption>PAIS 1010, where all of this happens. Forty seats, two walls of whiteboard, one screen &mdash; talks, flash talks, posters and the round-table all live in this room.</figcaption></figure>
     </div>
 
         <div class="days">
@@ -753,15 +772,27 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel%20Parq%20Central%2C%20806%20Central%20Ave%20SE%2C%20Albuquerque%2C%20NM%2087102&amp;destination=210%20Yale%20Blvd%20NE%2C%20Albuquerque%2C%20NM%2087106" target="_blank" rel="noopener">Directions, hotel to PAIS</a>
       </div>
     </div>
-    <figure class="venue-art"><img src="photos/pais-exterior.jpg" alt="The PAIS building at the University of New Mexico" width="1500" height="843" loading="lazy"></figure>
+    <div class="venue-art">
+      <figure><img src="photos/pais-exterior.jpg" alt="The PAIS building at the University of New Mexico" width="1500" height="843" loading="lazy"></figure>
+      <div class="venue-pair">
+        <figure><img src="photos/nm-sunset.jpg" alt="Cholla cactus silhouetted against an orange and pink desert sunset" width="760" height="1013" loading="lazy">
+          <figcaption>Cholla at sunset. The light is what brought the painters, and it is still the best argument for coming.</figcaption></figure>
+        <figure><img src="photos/nm-ristras.jpg" alt="Chile ristras hanging above crates of fruit at a roadside stand" width="860" height="645" loading="lazy">
+          <figcaption>Ristras at a roadside stand. Red or green is not a rhetorical question here.</figcaption></figure>
+      </div>
+      <div class="venue-pair">
+        <figure><img src="photos/nm-sandias.jpg" alt="Cholla in the foreground with the Sandia Mountains lit gold behind" width="860" height="645" loading="lazy">
+          <figcaption>The Sandias at the end of the day, from the edge of town. The range runs the whole eastern side of the city.</figcaption></figure>
+        <figure><img src="photos/nm-mesa.jpg" alt="Red sandstone bluff above juniper and pinyon" width="860" height="645" loading="lazy">
+          <figcaption>Red rock and juniper. The drive out of the valley in almost any direction looks like this.</figcaption></figure>
+      </div>
+    </div>
   </div>
   <div class="wrap">
     <p class="subhead2">The building</p>
     <div class="gallery">
       <figure><img src="photos/pais-atrium.jpg" alt="The PAIS atrium" width="1000" height="562" loading="lazy">
         <figcaption>The atrium. Arrival, coffee, and the conversations that happen between sessions.</figcaption></figure>
-      <figure><img src="photos/pais-1010.jpg" alt="PAIS 1010, the workshop room" width="1000" height="562" loading="lazy">
-        <figcaption>PAIS 1010. Forty seats, two walls of whiteboard, one large screen. Talks and posters both live here.</figcaption></figure>
       <figure><img src="photos/pais-courtyard.jpg" alt="The inner courtyard seen through the glass wall of PAIS 1010" width="1000" height="562" loading="lazy">
         <figcaption>The same room looks onto the inner courtyard. Late October in Albuquerque is warm enough to take the breaks outside.</figcaption></figure>
     </div>
@@ -772,6 +803,16 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
       <div><b>The Very Large Array</b><span>Twenty-seven dishes on the Plains of San Agustin, about two and a half hours southwest. Worth the drive.</span></div>
       <div><b>Santa Fe and Los Alamos</b><span>Santa Fe is an hour north. Los Alamos, where this field began, is about ninety minutes.</span></div>
       <div><b>&ldquo;Red or green?&rdquo;</b><span>The official state question. It refers to chile, you will be asked it, and if you cannot decide the answer is &ldquo;Christmas.&rdquo;</span></div>
+    </div>
+    <div class="gallery quad" style="margin-top:34px">
+      <figure><img src="photos/nm-crest.jpg" alt="Albuquerque seen from the crest of the Sandia Mountains" width="900" height="506" loading="lazy">
+        <figcaption>Albuquerque from the crest, 10,378 feet. This is what the fifteen minutes on the tram buys you.</figcaption></figure>
+      <figure><img src="photos/nm-taos.jpg" alt="Adobe structures at Taos Pueblo below a forested mountain" width="900" height="506" loading="lazy">
+        <figcaption>Taos Pueblo, inhabited for roughly a thousand years, about two and a half hours north.</figcaption></figure>
+      <figure><img src="photos/nm-santafe.jpg" alt="Adobe wall with projecting viga beams under a deep blue sky" width="900" height="506" loading="lazy">
+        <figcaption>Adobe and vigas in Santa Fe, an hour up the interstate.</figcaption></figure>
+      <figure><img src="photos/nm-cliffs.jpg" alt="Volcanic cliff and ponderosa pines" width="900" height="506" loading="lazy">
+        <figcaption>Volcanic rock and ponderosa on the way north, toward Los Alamos.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -803,12 +844,12 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
     <div>
       <svg class="foot-logo" viewBox="0 0 1800 486" role="img" aria-label="Carnot — Photonic Heat Engines"><use href="#lg"/></svg>
       <p style="max-width:46ch">24–25 October 2026 · PAIS Building, University of New Mexico, Albuquerque, New Mexico.</p>
-      <p class="legal">&copy; 2026 Carnot Workshop. Photographs of PAIS by Denis Seletskiy. Speaker portraits reproduced with permission and remain the property of their respective owners.</p>
+      <p class="legal">&copy; 2026 Carnot Workshop. Photographs of PAIS and New Mexico by Denis Seletskiy. Speaker portraits reproduced with permission and remain the property of their respective owners.</p>
     </div>
     <div style="text-align:right">
       <p>Program and speaker list are provisional.</p>
       <p><a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a> &middot; <a href="https://www.linkedin.com/events/7503264660901507072/" target="_blank" rel="noopener">LinkedIn event</a></p>
-      <p class="ver">Version 0.24 &middot; 9 September 2026</p>
+      <p class="ver">Version 0.27 &middot; 9 September 2026</p>
     </div>
   </div>
 </footer>

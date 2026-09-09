@@ -3,6 +3,34 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
+## v0.27 — 9 September 2026
+- Two photographs added: Albuquerque seen from the crest of the Sandias, which
+  now leads the "extra day" row and illustrates the tramway entry beside it,
+  and the Sandias lit gold at the end of the day, paired with the red rock in
+  the venue column
+- Crops tightened: the crest shot loses most of its empty upper sky so the city
+  and the rock ledge carry the frame; the red rock re-cropped to 4:3 to match
+  its new partner
+- The "extra day" gallery is pinned to four columns (two, then one, as the
+  viewport narrows) so the fourth photograph no longer orphans onto its own row
+
+## v0.26 — 9 September 2026
+- The PAIS 1010 photograph moved up into the empty space beside the programme
+  heading, where it does more work: it is the room every item on the timetable
+  happens in
+- Removed from "The building" gallery rather than shown twice on one page, so
+  that gallery is now the atrium and the courtyard — the spaces around the room
+
+## v0.25 — 9 September 2026
+- New Mexico photographs fill the empty right-hand column of the venue block:
+  cholla at sunset, ristras at a roadside stand, and red rock with juniper,
+  stacked under the PAIS exterior shot
+- A second gallery under "If you can stay an extra day" — Taos Pueblo, adobe
+  and vigas in Santa Fe, volcanic rock on the way toward Los Alamos — cropped
+  16:9 to match the building gallery above it
+- All six ship as separate lazy-loaded files under photos/, so index.html does
+  not grow; footer photo credit widened to "PAIS and New Mexico"
+
 ## v0.24 — 9 September 2026
 - Alejandro Rodriguez portrait added; every name on the page now carries a
   face, and no initials monograms remain outside the speakers grid
