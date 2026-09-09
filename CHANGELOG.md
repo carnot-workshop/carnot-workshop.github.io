@@ -3,6 +3,25 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
+## v0.24 — 9 September 2026
+- Alejandro Rodriguez portrait added; every name on the page now carries a
+  face, and no initials monograms remain outside the speakers grid
+
+## v0.23 — 9 September 2026
+- Portraits added for the local organizing committee: Alexander Albrecht,
+  Max Gardner and Morteza Darvishi. Alejandro Rodriguez is the last remaining
+  initials monogram
+
+## v0.22 — 9 September 2026
+- Committee cards now carry circular portraits, so attendees can put faces to
+  the people running the workshop — particularly the local committee, who are
+  not introduced anywhere else on the page
+- Seletskiy, Kuno and Pauzauskie reuse the portraits already inlined in their
+  speaker cards, so the page gains no weight for those three
+- Rodriguez, Albrecht, Gardner and Darvishi show initials monograms on brand
+  navy until photographs arrive — swap the placeholder for an <img> in the
+  matching .org-av block
+
 ## v0.21 — 9 September 2026
 - Fixed: the Maxwell Labs chip overlapped the facts row on wide screens. The
   hero rail had been absolutely positioned at a fixed offset from the hero's
