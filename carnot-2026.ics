@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Carnot Workshop//Carnot 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:carnot-2026@carnot-workshop.github.io
+DTSTAMP:20260909T000000Z
+DTSTART:20261024T140000Z
+DTEND:20261025T200000Z
+SUMMARY:Carnot 2026 — Workshop on Photonic Heat Engines
+DESCRIPTION:A two-day workshop on optical refrigeration\, radiation-balanced
+  lasers\, and high-power laser source development. Single track\, discussion-
+ focused. Program\, speakers and travel details: https://carnot-workshop.githu
+ b.io/
+LOCATION:PAIS Building\, 210 Yale Boulevard NE\, Albuquerque\, NM 87106
+URL:https://carnot-workshop.github.io/
+END:VEVENT
+END:VCALENDAR

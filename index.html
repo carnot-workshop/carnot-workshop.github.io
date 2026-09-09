@@ -3,29 +3,61 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- ===== UNLISTED MODE =====================================================
-     The line below keeps this page out of Google and Bing while the program
-     is still being settled. DELETE THE <meta name="robots"> LINE to launch
-     publicly. Nothing else needs to change.
-     ====================================================================== -->
-<meta name="robots" content="noindex, nofollow">
 <meta name="description" content="A two-day workshop on optical refrigeration, radiation-balanced lasers and high-power laser source development. 24-25 October 2026, PAIS Building, University of New Mexico, Albuquerque.">
 <link rel="icon" type="image/png" href="data:image/png;base64,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">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Carnot 2026 — Workshop on Photonic Heat Engines">
 <meta property="og:description" content="A two-day workshop on optical refrigeration, radiation-balanced lasers and high-power laser source development. 24-25 October 2026, PAIS Building, University of New Mexico, Albuquerque.">
-<meta property="og:image" content="og-image.png">
+<meta property="og:url" content="https://carnot-workshop.github.io/">
+<meta property="og:image" content="https://carnot-workshop.github.io/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <style>*{margin:0;padding:0}html{-webkit-text-size-adjust:100%}</style>
 <!-- ===== SITE VERSION =====================================================
      Bump this on every content change, and update the matching line in the
      footer (search: class="ver") and the entry in CHANGELOG.md.
-     CURRENT: v0.16 — 4 September 2026
+     CURRENT: v0.21 — 9 September 2026
      ====================================================================== -->
 <title>Carnot 2026 Workshop</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Carnot 2026 — Workshop on Photonic Heat Engines",
+  "startDate": "2026-10-24T08:00:00-06:00",
+  "endDate": "2026-10-25T14:00:00-06:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "url": "https://carnot-workshop.github.io/",
+  "image": "https://carnot-workshop.github.io/og-image.png",
+  "description": "A two-day workshop on optical refrigeration, radiation-balanced lasers and high-power laser source development. Single track, discussion-focused, with fourteen invited talks and a poster session with prizes.",
+  "location": {
+    "@type": "Place",
+    "name": "PAIS Building, University of New Mexico",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "210 Yale Boulevard NE",
+      "addressLocality": "Albuquerque",
+      "addressRegion": "NM",
+      "postalCode": "87106",
+      "addressCountry": "US"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Carnot Workshop",
+    "url": "https://carnot-workshop.github.io/"
+  },
+  "sameAs": ["https://www.linkedin.com/events/7503264660901507072/"],
+  "sponsor": [
+    { "@type": "Organization", "name": "Maxwell Labs" },
+    { "@type": "Organization", "name": "University of New Mexico, Department of Physics & Astronomy" },
+    { "@type": "Organization", "name": "SELA Photonics" }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -104,8 +136,17 @@ a{color:inherit}
 .navlinks a:hover{opacity:1; border-bottom-color:currentColor}
 
 .hero-body{margin-top:auto; padding:0 28px 96px; position:relative}
-.hero-side{display:none; position:absolute; right:28px; bottom:206px; text-align:right}
-@media (min-width:1200px){.hero-side{display:block}}
+.hero-side{display:none; text-align:right}
+@media (min-width:1200px){
+  .hero-body{display:grid; grid-template-columns:minmax(0,1fr) auto; column-gap:56px; align-items:start}
+  .hero-body>.hero-kicker{grid-column:1; grid-row:1}
+  .hero-body>.hero-logo{grid-column:1; grid-row:2}
+  .hero-body>.hero-sub{grid-column:1; grid-row:3}
+  .hero-body>.hero-tag{grid-column:1; grid-row:4}
+  .hero-side{display:block; grid-column:2; grid-row:1 / 5; align-self:end; justify-self:end}
+  .hero-body>.hero-facts{grid-column:1 / -1; grid-row:5}
+  .hero-body>.hero-note{grid-column:1 / -1; grid-row:6}
+}
 .hs-k{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; opacity:.62; margin-bottom:9px}
 .hs-list{list-style:none; margin:0 0 26px; padding:0}
 .hs-list li{font-size:15px; font-weight:500; line-height:1.75}
@@ -130,6 +171,16 @@ a{color:inherit}
 .fact:last-child{border-right:0; padding-right:0; margin-right:0}
 .fact-k{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; opacity:.62; display:block; margin-bottom:5px}
 .fact-v{font-size:16px; font-weight:500}
+.hero-note{
+  display:inline-flex; align-items:center; gap:10px; margin-top:26px;
+  background:rgba(255,255,255,.62); border:1px solid rgba(10,36,72,.16);
+  border-radius:999px; padding:10px 20px 10px 16px; font-size:15px;
+  box-shadow:0 2px 10px -4px rgba(10,32,56,.25); backdrop-filter:blur(2px);
+}
+.hero-note i{width:9px; height:9px; border-radius:50%; background:var(--glass); flex:none; display:block}
+.hero-note b{font-weight:600}
+.hero-note a{color:inherit; text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px}
+@media (max-width:640px){.hero-note{border-radius:14px; align-items:flex-start; padding:12px 16px}.hero-note i{margin-top:7px}}
 
 /* ---------- SECTIONS ---------- */
 section{padding:88px 0}
@@ -357,6 +408,7 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <div class="fact"><span class="fact-k">City</span><span class="fact-v">Albuquerque, New Mexico</span></div>
         <div class="fact"><span class="fact-k">Format</span><span class="fact-v">Single track, discussion-focused</span></div>
       </div>
+      <p class="hero-note"><i aria-hidden="true"></i><span><b>Registration opens shortly.</b> Join the <a href="https://www.linkedin.com/events/7503264660901507072/" target="_blank" rel="noopener">LinkedIn event</a> or email <a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a> to be notified.</span></p>
     </div>
   </div>
 </div>
@@ -545,11 +597,11 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         </div>
       </article>
       <article class="person" style="--ring:var(--hot)">
-        <div class="avatar" style="background:#0A2448"><span class="initials">ML</span></div>
+        <div class="avatar" style="background:#0A2448"><span class="initials">PC</span></div>
         <div>
-          <h3 class="person-n">To be announced</h3>
+          <h3 class="person-n">Pengning Chao</h3>
           <p class="person-a">Maxwell Labs</p>
-          <p class="person-i">Invited talk from the workshop&rsquo;s sponsor; speaker and topic to be confirmed.</p>
+          <p class="person-i">Invited talk from Maxwell Labs; title to be announced.</p>
           <span class="person-t">High-power sources</span>
         </div>
       </article>
@@ -562,7 +614,7 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
     <div class="sec-head" style="margin-bottom:0">
       <p class="eyebrow">Support</p>
       <h2 style="font-size:clamp(26px,3.4vw,34px)">Sponsors</h2>
-      <p>Organizations interested in supporting the workshop are welcome to contact the organizing committee.</p>
+      <p>Organizations interested in supporting the workshop are welcome to write to <a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a>.</p>
     </div>
     <div style="background:#0A2448; border-radius:14px; padding:30px 36px; margin-top:26px; box-shadow:var(--shadow)">
       <p class="eyebrow" style="color:#839BAE; margin:0 0 14px">Workshop sponsor</p>
@@ -685,7 +737,8 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <li><span>Lodging</span><div>Hotel Parq Central<br>806 Central Avenue SE, Albuquerque, NM 87102<br>Block held at the UNM rate for invited speakers and international guests</div></li>
         <li><span>From the airport</span><div>Albuquerque International Sunport (ABQ) is 10 minutes from the hotel. Hotel Parq Central runs a complimentary airport shuttle, 7:30&nbsp;am&ndash;10:30&nbsp;pm.</div></li>
         <li><span>Hotel to PAIS</span><div>The free 777 Express bus, or a 25-minute walk.</div></li>
-        <li><span>Registration</span><div>Details to follow — the committee intends to keep attendance free for students</div></li>
+        <li><span>Calendar</span><div><a href="carnot-2026.ics" download>Add the workshop to your calendar</a> (.ics)</div></li>
+        <li><span>Registration</span><div>Opening shortly. The committee intends to keep attendance free for students. Join the <a href="https://www.linkedin.com/events/7503264660901507072/" target="_blank" rel="noopener">LinkedIn event</a> or write to <a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a> to be notified when registration opens.</div></li>
       </ul>
       <div class="maplinks">
         <a href="https://www.google.com/maps/search/?api=1&amp;query=210%20Yale%20Blvd%20NE%2C%20Albuquerque%2C%20NM%2087106" target="_blank" rel="noopener">PAIS on the map</a>
@@ -747,7 +800,8 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
     </div>
     <div style="text-align:right">
       <p>Program and speaker list are provisional.</p>
-      <p class="ver">Version 0.16 &middot; 4 September 2026</p>
+      <p><a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a> &middot; <a href="https://www.linkedin.com/events/7503264660901507072/" target="_blank" rel="noopener">LinkedIn event</a></p>
+      <p class="ver">Version 0.21 &middot; 9 September 2026</p>
     </div>
   </div>
 </footer>

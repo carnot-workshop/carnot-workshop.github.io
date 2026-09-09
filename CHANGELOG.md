@@ -3,6 +3,47 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
+## v0.21 — 9 September 2026
+- Fixed: the Maxwell Labs chip overlapped the facts row on wide screens. The
+  hero rail had been absolutely positioned at a fixed offset from the hero's
+  bottom edge; v0.19's registration notice grew that edge and pushed the rail
+  up into the text. The rail is now a real grid column, so anything added below
+  it moves the layout rather than colliding with it
+
+## v0.20 — 9 September 2026
+- LinkedIn event linked from the site: the hero notice now offers both routes
+  ("Join the LinkedIn event or email carnot.workshop@gmail.com"), matched in
+  the venue block's Registration row and the footer
+- `sameAs` added to the Event JSON-LD pointing at the LinkedIn event, so search
+  engines treat the two listings as one event rather than competing ones
+
+## v0.19 — 9 September 2026
+- Registration notice added to the hero, directly under the facts row and above
+  the fold on both desktop and mobile: "Registration opens shortly. Write to
+  carnot.workshop@gmail.com to be notified."
+- carnot.workshop@gmail.com wired in as the workshop's contact address — the
+  hero notice, the Registration row in the venue block, the sponsors paragraph
+  (previously "contact the organizing committee" with no address), and the
+  footer
+
+## v0.18 — 9 September 2026
+- The site is public: the `<meta name="robots" content="noindex, nofollow">`
+  line is gone, so search engines can index the page
+- Open Graph URLs made absolute (`og:image`) and `og:url` added, so LinkedIn
+  and X resolve the link preview reliably. Re-run the URL through LinkedIn's
+  Post Inspector after any future change to these tags
+- `Event` structured data (schema.org JSON-LD) added — dates, venue, organizer
+  and sponsors — making the workshop eligible for Google event listings
+- `carnot-2026.ics` added with an "Add the workshop to your calendar" link in
+  the venue block
+- README updated to match
+
+## v0.17 — 8 September 2026
+- The fourteenth invited talk now has a name: Pengning Chao (Maxwell Labs)
+  replaces the "To be announced" placeholder; talk title still to come
+- Local organizing committee and the new speaker carried onto the printed
+  poster, which also picks up the site's "Workshop sponsor" wording
+
 ## v0.16 — 4 September 2026
 - Page reordered: Speakers now comes before the Tentative program, with the
   Sponsors panel between them. The program then runs into the poster session

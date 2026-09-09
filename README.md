@@ -18,19 +18,15 @@ This repo is named `carnot-workshop.github.io`, so GitHub Pages serves it at the
 organization root. Settings -> Pages -> Source: **Deploy from a branch**, branch
 `main`, folder `/ (root)`.
 
-## Currently unlisted
+## Public and indexed
 
-`index.html` carries `<meta name="robots" content="noindex, nofollow">`, so the
-page is reachable by anyone with the link but is kept out of Google and Bing.
-Link previews in email and Slack still work.
+As of v0.18 the page is publicly searchable — the `<meta name="robots">` line
+that kept it out of Google and Bing has been removed. Allow a few days for
+search engines to pick it up.
 
-**To launch publicly:** delete that one `<meta name="robots">` line (it sits under
-a clearly marked comment block near the top of `index.html`) and commit. Nothing
-else changes. Allow a few days for search engines to pick the page up.
-
-Note this is discretion, not security: the repository and the organization are
-public, and the URL is guessable from the org name. Do not put anything in here
-that would be a problem for a stranger to read.
+`index.html` also carries `Event` structured data (JSON-LD) so the workshop is
+eligible for Google's event listings, and `carnot-2026.ics` lets visitors add
+the dates to their calendar.
 
 ## Moving to carnot.unm.edu
 
@@ -38,9 +34,12 @@ that would be a problem for a stranger to read.
 2. Ask UNM IT for a DNS CNAME record: `carnot` -> `carnot-workshop.github.io`
 3. Settings -> Pages -> Custom domain: `carnot.unm.edu`, Save, then tick **Enforce HTTPS**
 
-No content changes needed. Once the domain is live, edit the `og:image` line in
-`index.html` to the absolute URL (`https://carnot.unm.edu/og-image.png`) so link
-previews resolve for people who aren't on the site.
+Once the domain is live, update the absolute URLs in `index.html` — `og:url`,
+`og:image`, and the `url`/`image` fields in the JSON-LD block — from
+`https://carnot-workshop.github.io/` to `https://carnot.unm.edu/`. After any
+change to those tags, run the URL through LinkedIn's Post Inspector
+(<https://www.linkedin.com/post-inspector/>) to force a re-scrape; LinkedIn
+caches link previews for weeks otherwise.
 
 ## Editing
 
