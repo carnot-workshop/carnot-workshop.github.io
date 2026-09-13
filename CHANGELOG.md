@@ -3,6 +3,42 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
+## v0.31 — 13 September 2026
+- Registration held back: the form link is removed again while the form is
+  rebuilt. The registration card keeps its button in place, styled as a
+  pending outline reading "Registration form — opening shortly", so the
+  section still tells people where to look
+- Hero notice and section heading reworded from "Registration is open" to
+  "opens in the next few days"; email offered as a way to reserve a place
+  in the meantime
+- schema.org Offer now points at the site's own #register section rather
+  than a form URL that is not public
+- Corrected two stale claims that contradicted the form: abstracts are not
+  submitted with registration, and the form takes three minutes, not five
+
+## v0.30 — 13 September 2026
+- Registration form is live: the `REGISTRATION_FORM_URL` placeholder replaced
+  with the published Google Form in both the registration section's button and
+  the schema.org Offer block
+
+## v0.29 — 13 September 2026
+- Joel Bixler's profile updated at his request: affiliation changed from Air
+  Force Research Laboratory to Air Force Office of Scientific Research, and the
+  interests line replaced with his current role, Program Officer for the
+  High-Energy Radiation-Matter Systems (HERMES) portfolio
+
+## v0.28 — 12 September 2026
+- Registration section added between the poster session and the venue: free,
+  forty places, 10 October deadline, poster abstracts submitted with the
+  registration, and a card linking to the Google Form
+- Hero notice changed from "Registration opens shortly" to "Registration is
+  open", pointing at the new section; the venue block's Registration row and
+  the navigation follow
+- JSON-LD gains `isAccessibleForFree`, `maximumAttendeeCapacity` and a zero-price
+  `Offer`, so search engines can show the workshop as a free event
+- The form URL appears twice in index.html as the placeholder
+  REGISTRATION_FORM_URL — replace both before publishing
+
 ## v0.27 — 9 September 2026
 - Two photographs added: Albuquerque seen from the crest of the Sandias, which
   now leads the "extra day" row and illustrates the tramway entry beside it,

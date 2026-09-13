@@ -15,7 +15,7 @@
 <!-- ===== SITE VERSION =====================================================
      Bump this on every content change, and update the matching line in the
      footer (search: class="ver") and the entry in CHANGELOG.md.
-     CURRENT: v0.27 — 9 September 2026
+     CURRENT: v0.31 — 13 September 2026
      ====================================================================== -->
 <title>Carnot 2026 Workshop</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,6 +51,16 @@
     "url": "https://carnot-workshop.github.io/"
   },
   "sameAs": ["https://www.linkedin.com/events/7503264660901507072/"],
+  "isAccessibleForFree": true,
+  "maximumAttendeeCapacity": 40,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://carnot-workshop.github.io/#register",
+    "validFrom": "2026-09-12T00:00:00-06:00"
+  },
   "sponsor": [
     { "@type": "Organization", "name": "Maxwell Labs" },
     { "@type": "Organization", "name": "University of New Mexico, Department of Physics & Astronomy" },
@@ -258,6 +268,30 @@ section{padding:88px 0}
 
 /* ---------- POSTERS ---------- */
 .posters{background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+.reg-grid{display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:56px; align-items:start}
+@media (max-width:900px){.reg-grid{grid-template-columns:1fr; gap:34px}}
+.reg-card{background:var(--surface); border:2px solid var(--amber-line,var(--hot)); border-radius:4px; padding:30px 32px}
+.reg-card h3{font-family:"Instrument Serif",Georgia,serif; font-size:26px; margin-bottom:8px}
+.reg-card .free{font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--hot); display:block; margin-bottom:14px}
+.reg-btn{display:inline-block; margin:20px 0 0; background:#0A2448; color:#FFFFFF; text-decoration:none;
+  font-size:16px; font-weight:500; padding:14px 26px; border-radius:3px;
+  border:1.5px solid transparent}
+.reg-btn:hover{opacity:.9}
+.reg-btn.soon{background:transparent; color:#0A2448; border:1.5px dashed #8595A6;
+  cursor:default; opacity:.75}
+.reg-btn.soon:hover{opacity:.75}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .reg-btn{background:var(--hot); color:#0A2448}
+}
+:root[data-theme="dark"] .reg-btn{background:var(--hot); color:#0A2448}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .reg-btn.soon{background:transparent; color:var(--hot); border-color:var(--hot)}
+}
+:root[data-theme="dark"] .reg-btn.soon{background:transparent; color:var(--hot); border-color:var(--hot)}
+.reg-note{font-size:13.5px; color:var(--muted); margin-top:14px; line-height:1.5}
+.reg-list{margin:22px 0 0; padding:0; list-style:none; border-top:1px solid var(--line)}
+.reg-list li{display:grid; grid-template-columns:118px 1fr; gap:18px; padding:12px 0; border-bottom:1px solid var(--line); font-size:15px; align-items:baseline}
+.reg-list span{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
 .prize-row{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:28px}
 .prize{border:1px solid var(--line); border-radius:3px; padding:20px; background:var(--surface-2)}
 .prize .amt{font-family:"Instrument Serif",Georgia,serif; font-size:38px; line-height:1; color:var(--hot)}
@@ -403,6 +437,7 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <a href="#sponsors">Sponsors</a>
         <a href="#program">Program</a>
         <a href="#posters">Posters</a>
+        <a href="#register">Register</a>
         <a href="#venue">Venue</a>
       </nav>
     </div>
@@ -430,7 +465,7 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <div class="fact"><span class="fact-k">City</span><span class="fact-v">Albuquerque, New Mexico</span></div>
         <div class="fact"><span class="fact-k">Format</span><span class="fact-v">Single track, discussion-focused</span></div>
       </div>
-      <p class="hero-note"><i aria-hidden="true"></i><span><b>Registration opens shortly.</b> Join the <a href="https://www.linkedin.com/events/7503264660901507072/" target="_blank" rel="noopener">LinkedIn event</a> or email <a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a> to be notified.</span></p>
+      <p class="hero-note"><i aria-hidden="true"></i><span><b>Registration opens in the next few days</b> &mdash; free, and limited to forty places. <a href="#register">Details here</a>, or email <a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a>.</span></p>
     </div>
   </div>
 </div>
@@ -613,8 +648,8 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <div class="avatar"><img src="data:image/jpeg;base64,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" alt="Joel Bixler" width="200" height="200" loading="lazy"></div>
         <div>
           <h3 class="person-n">Joel Bixler</h3>
-          <p class="person-a">Air Force Research Laboratory</p>
-          <p class="person-i">Biomedical optics and laser bioeffects; Air Force research programs.</p>
+          <p class="person-a">Air Force Office of Scientific Research</p>
+          <p class="person-i">Program Officer, High-Energy Radiation-Matter Systems (HERMES).</p>
           <span class="person-t">Round-table</span>
         </div>
       </article>
@@ -746,6 +781,34 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
   </div>
 </section>
 
+<section id="register">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Registration</p>
+      <h2>Registration</h2>
+      <p>Attendance is free, and places are limited to forty &mdash; the capacity of PAIS&nbsp;1010. The form opens in the next few days; everything you will need to answer is below, so you can come back and finish it in three minutes.</p>
+    </div>
+    <div class="reg-grid">
+      <div>
+        <ul class="reg-list">
+          <li><span>Cost</span><div>Free for all attendees, including the catered lunch, the poster reception and the workshop dinner.</div></li>
+          <li><span>Capacity</span><div>Forty places. We will close registration if it fills before the deadline.</div></li>
+          <li><span>Deadline</span><div>10 October 2026. Abstracts are collected separately, in early October.</div></li>
+          <li><span>Posters</span><div>Students and postdocs are especially encouraged. No abstract is needed to register &mdash; we write to poster presenters in early October. Every poster gets a two-minute flash talk, and prizes are awarded at the dinner.</div></li>
+          <li><span>Questions</span><div><a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a></div></li>
+        </ul>
+      </div>
+      <div class="reg-card">
+        <span class="free">No registration fee</span>
+        <h3>Register for Carnot 2026</h3>
+        <p style="font-size:15px; color:var(--ink-2); line-height:1.55">Three minutes. Name, affiliation, which days you are coming, dietary requirements, and whether you are bringing a poster. No abstract needed.</p>
+        <span class="reg-btn soon" aria-disabled="true">Registration form &mdash; opening shortly</span>
+        <p class="reg-note">The form goes live here in the next few days. It opens in a Google Form, needs no account, and you will be able to edit your answers afterwards. If you would rather not wait, email <a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a> and we will hold you a place.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="venue">
   <div class="wrap venue-grid">
     <div>
@@ -764,7 +827,7 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <li><span>From the airport</span><div>Albuquerque International Sunport (ABQ) is 10 minutes from the hotel. Hotel Parq Central runs a complimentary airport shuttle, 7:30&nbsp;am&ndash;10:30&nbsp;pm.</div></li>
         <li><span>Hotel to PAIS</span><div>The free 777 Express bus, or a 25-minute walk.</div></li>
         <li><span>Calendar</span><div><a href="carnot-2026.ics" download>Add the workshop to your calendar</a> (.ics)</div></li>
-        <li><span>Registration</span><div>Opening shortly. The committee intends to keep attendance free for students. Join the <a href="https://www.linkedin.com/events/7503264660901507072/" target="_blank" rel="noopener">LinkedIn event</a> or write to <a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a> to be notified when registration opens.</div></li>
+        <li><span>Registration</span><div>Open and free, limited to forty places; closes 10 October 2026. <a href="#register">Register here</a>.</div></li>
       </ul>
       <div class="maplinks">
         <a href="https://www.google.com/maps/search/?api=1&amp;query=210%20Yale%20Blvd%20NE%2C%20Albuquerque%2C%20NM%2087106" target="_blank" rel="noopener">PAIS on the map</a>
@@ -849,7 +912,7 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
     <div style="text-align:right">
       <p>Program and speaker list are provisional.</p>
       <p><a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a> &middot; <a href="https://www.linkedin.com/events/7503264660901507072/" target="_blank" rel="noopener">LinkedIn event</a></p>
-      <p class="ver">Version 0.27 &middot; 9 September 2026</p>
+      <p class="ver">Version 0.31 &middot; 13 September 2026</p>
     </div>
   </div>
 </footer>
