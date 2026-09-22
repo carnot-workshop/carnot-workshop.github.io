@@ -3,6 +3,94 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
+## v0.39 — 22 September 2026
+- "Poster session and reception" is now "Poster session and light
+  reception", noting that dinner follows, so nobody fills up on the
+  reception; the poster section says the same
+- "Transport to dinner" is now "Coach to the restaurant", described as a
+  group bus from the PAIS building and back afterwards
+
+## v0.38 — 22 September 2026
+- Triton Photonics logo (their light lockup, for dark grounds) replaces the
+  text placeholder in the sponsor panel
+
+## v0.37 — 22 September 2026
+- Markus Hehlen's affiliation changed from Los Alamos National Laboratory
+  to Triton Photonics
+
+## v0.36 — 22 September 2026
+- Removed every mention of a forty-place limit, so a bigger room stays an
+  option: the hero notice, the registration lede, the "Capacity" row, the
+  venue's Registration and Room rows, the PAIS 1010 photo caption, and
+  maximumAttendeeCapacity in the schema.org data
+
+## v0.35 — 22 September 2026
+- Premise section cut from about 290 words to about 125. It no longer
+  mentions photons at all: the opening states the physics directly — a
+  single-mode pump against broadband, isotropic fluorescence, and the
+  difference in entropy between those two light fields — rather than
+  leading with a slogan or with the correction of one
+- The three operating points now appear in the same order as the diagram
+  beside them, one clause each
+- Hero notice no longer reads as if email were a way to register: "Register
+  here. Questions: carnot.workshop@gmail.com"
+- Dropped the paragraph on thermal lensing, stress and linewidth down to one
+  sentence; the history paragraph is two short sentences
+
+## v0.34 — 22 September 2026
+- Organizing committees lay out four across on wide screens (two on tablets,
+  one on phones), so each committee is a single row instead of three plus
+  an orphan. "New Mexico", "Notre Dame" and "Maxwell Labs" are bound with
+  non-breaking spaces so the narrower cards never split them
+- UNM Physics & Astronomy's official logo replaces the text lockup in the
+  sponsor panel, on a white tile so the mark itself is not recoloured
+- Triton Photonics added under "With support from", linked to
+  tritonphotonics.com, and to the schema.org sponsor list. Shown as a name
+  until the logo file is in hand
+
+## v0.33 — 22 September 2026
+- Registration is live: the button and the schema.org Offer point at the
+  final form (forms.gle/A5s9j5ocgsVA1uSt9); hero notice and section heading
+  say "Registration is open"
+- Program has a definite end: 08:00 Saturday to 15:00 Sunday, stated in the
+  program introduction. The program closes at 14:00 and the optional
+  laboratory tours run to 15:00. schema.org endDate and the .ics DTEND
+  (with SEQUENCE bumped so calendars pick up the change) both now say 15:00
+- Saturday rebuilt: registration, arrival and coffee from 08:00; opening
+  shortened to 20 minutes; 15-minute workshop photograph straight after
+  lunch; poster session 75 minutes; 15 minutes of coach transport before
+  dinner, which is now seated at 19:35. Coffee breaks left where they are
+  until the talk sign-ups are in
+- Sunday opens with registration, arrival and coffee at 09:00. Laboratory
+  tours moved from the Saturday poster session to Sunday afternoon; the
+  closing row reads "Lab tours / adjourn". The note about possibly moving
+  the tours is gone
+- "Round-table" renamed "Panel discussion" throughout, including Joel
+  Bixler's speaker tag
+- Removed the "posters on display" note from lunch, and the claim that
+  posters go up alongside the talks
+- Session III theme no longer says "the stall point"; it names the pump
+  wavelength at which quantum-defect heating and anti-Stokes cooling cancel
+- Ghazaleh Ansari added to the local organizing committee
+- Sponsor logos are links: Maxwell Labs, SELA Photonics and UNM Physics &
+  Astronomy
+- Hot-air balloons: the envelope now closes at a throat and the ropes hang
+  from it to the basket; previously they started in mid-air beside the
+  envelope
+
+## v0.32 — 14 September 2026
+- Corrected the premise section. It opened "Photons carry entropy", which is
+  wrong — entropy is a property of a field or an ensemble, not of a single
+  quantum. Rewritten around the asymmetry that actually does the work: the
+  pump is one narrow directional mode carrying almost no entropy, the
+  fluorescence is broadband and isotropic across an enormous number of modes
+- The three operating points are now stated mechanistically rather than
+  metaphorically: quantum-defect heating, pumping red of the mean fluorescence
+  wavelength, and the pump wavelength at which the two cancel. "Run it in
+  reverse" and "the stall point" are gone from both the prose and the diagram
+- The linewidth claim is now posed as an open question rather than a settled
+  result, which is what it is
+
 ## v0.31 — 13 September 2026
 - Registration held back: the form link is removed again while the form is
   rebuilt. The registration card keeps its button in place, styled as a
