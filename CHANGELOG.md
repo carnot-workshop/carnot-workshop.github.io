@@ -3,6 +3,11 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
+## v0.40 — 23 September 2026
+- carnot.unm.edu now has a valid certificate, so the site's own references
+  move to it: og:url (with its trailing slash restored), og:image, the
+  schema.org url/image/offers, and the URL inside the .ics file
+
 ## v0.39 — 22 September 2026
 - "Poster session and reception" is now "Poster session and light
   reception", noting that dinner follows, so nobody fills up on the
