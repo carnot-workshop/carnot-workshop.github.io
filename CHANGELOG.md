@@ -3,6 +3,21 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
+## v0.69 — 15 October 2026
+- Memorial closing paragraph replaced with Denis's own wording, lightly
+  edited: the semiconductor he never got to see cooled, the unfulfilled
+  dream his co-authors named, the two sessions that carry the work on, and
+  the line about his thinking on noise, entropy and engine efficiency.
+  Closes "with all of us"
+- Practical-information row still advertised registration as open; now reads
+  "Free to attend; closed 10 October 2026" and links to late requests
+
+## v0.68 — 15 October 2026
+- Memorial rewritten so Sheik-Bahae does the verbs: he worked out the
+  theory of radiation-balanced lasers and his group built the first ones;
+  pulling the mirror stack out of a disk laser opened the MECSEL field.
+  The earlier passive phrasing read as a citation list rather than a life
+
 ## v0.67 — 15 October 2026
 - Session VI's first talk shown as an unnamed placeholder while the speaker
   is unconfirmed; the slot and its 30 minutes are held
@@ -15,7 +30,7 @@ Bump the version in three places when you change the site:
 ## v0.65 — 15 October 2026
 - Inline SVG icons on the schedule — coffee, lunch, coach, dinner, and a
   calendar on each day head. Drawn rather than typed as emoji so they take
-  the page's ink colour and survive dark mode and printing
+  the page's ink color and survive dark mode and printing
 - First coffee break moved to 10:00, splitting Session I into two and two;
   the second moved to 15:00, after Chao, so Session III is no longer cut
   across. Nothing downstream shifts
