@@ -3,6 +3,175 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
+## v0.67 — 15 October 2026
+- Session VI's first talk shown as an unnamed placeholder while the speaker
+  is unconfirmed; the slot and its 30 minutes are held
+
+## v0.66 — 15 October 2026
+- Selected works in the memorial reordered chronologically, 1989 to 2022,
+  with the year set above each entry so the sequence reads as a career
+  rather than a list
+
+## v0.65 — 15 October 2026
+- Inline SVG icons on the schedule — coffee, lunch, coach, dinner, and a
+  calendar on each day head. Drawn rather than typed as emoji so they take
+  the page's ink colour and survive dark mode and printing
+- First coffee break moved to 10:00, splitting Session I into two and two;
+  the second moved to 15:00, after Chao, so Session III is no longer cut
+  across. Nothing downstream shifts
+- Session IV renamed "High-power and radiation-balanced lasers"; Session V
+  renamed "Posters and flash talks", since "New work" implied the rest of
+  the programme was stale; Sunday's "Contributed talks" renamed "Talks from
+  the poster prize winners", which is what they are
+- Seventh poster added (Brandon Stone, UNM CHTM, thermal noise in SiN
+  microring resonators); Chao's title updated to the registered wording
+- Fixed the session-themes block: its grid's first column was an 11px
+  swatch, and when the swatches were removed in v0.56 the text inherited
+  that column and wrapped one word per line
+
+## v0.64 — 14 October 2026
+- `+` replaces `⊥` for density-of-states work and joins the key as a third
+  row, shown in all three colours. The two empty cells are deliberate: a
+  balanced laser or a high-power source could be built by engineering
+  absorption and extraction, and nobody here is doing it
+
+## v0.63 — 14 October 2026
+- Net-heating colour brightened to #E08400, closer to the logo amber. The
+  logo's own #F6A21A measures 2.03:1 against this background and cannot be
+  used for small marks; the brighter orange also improves colour-vision
+  separation from the green, from ΔE 8.5 to 11.5 under protanopia
+
+## v0.62 — 14 October 2026
+- Density-of-states work moved out of the pump axis, where it had been
+  labelled "either pump" — a label that described what the work is not.
+  It is a different variable, and now says so
+
+## v0.61 — 14 October 2026
+- Added the 2018 all-solid-state optical cryocooler (Hehlen et al.) to the
+  selected works: the paper where the physics does a job, cooling a HgCdTe
+  sensor to 135 K and taking a real spectrum with it
+
+## v0.60 — 14 October 2026
+- Sunday working groups relocated from PAIS 1110 to two adjacent classrooms,
+  corrected in the schedule, the venue list and the programme caption
+
+## v0.59 — 14 October 2026
+- Hexagon introduced for work that acts on emission and so is indifferent to
+  the pump
+
+## v0.58 — 14 October 2026
+- Net-heating colour moved off mustard and toward the brand orange
+
+## v0.57 — 14 October 2026
+- Key rebuilt as a matrix, heat direction across and pump down, so the two
+  variables read as independent; symbols enlarged; triangle now means
+  coherent, a beam being directional and broadband emission not
+
+## v0.56 — 14 October 2026
+- Badges re-encoded to carry physics rather than session: colour for the
+  direction of heat flow, shape for the pump. Session colour dropped from
+  the schedule bands, because the same four colours meaning "session" there
+  and "physics" on the cards was the collision that prompted this
+
+## v0.55 — 14 October 2026
+- Venue updated: PAIS 1100, a 200-seat auditorium, for all talks and the
+  panel; PAIS 1110 for lunch, posters and discussion through the day
+- Sunday's strategy session replaced by two working groups — laser cooling,
+  and radiation-balanced and high-power design — swapping after 30 minutes,
+  with the leads reporting back over the second half of lunch
+
+## v0.54 — 14 October 2026
+- Poster prizes credited to all three sponsors rather than SELA alone, with
+  the names linking down to the sponsor panel
+
+## v0.53 — 14 October 2026
+- Session key added above the speakers grid, so the scheme is met before the
+  portraits rather than inferred from them
+
+## v0.52 — 14 October 2026
+- Session palette rebuilt from the heat axis in the premise diagram: blue
+  where light carries heat out, green where the two cancel, amber where the
+  defect deposits it. The diagram gains a mid-point stop and the
+  radiation-balanced box is filled green, so the middle of the axis reads as
+  a place rather than a gap
+- Memorial compressed — smaller body text, tighter leading, narrower photo
+  column
+
+## v0.51 — 14 October 2026
+- Saturday rebuilt to two coffee breaks: Epstein moves into Session I, the
+  welcome stands alone as Session 0, and the afternoon break lands at 14:30
+
+## v0.50 — 14 October 2026
+- Selected works added beneath the memorial, one reference for each claim
+  the prose makes, taken from the obituary's own reference list
+
+## v0.49 — 14 October 2026
+- US spelling throughout
+- Memorial wording adjusted so it neither pre-empts an unpublished result
+  nor rules on whether an earlier claim counts
+- The community reporting standard (Nature Reviews Methods Primers 6, 46)
+  linked from the Session II theme
+
+## v0.48 — 14 October 2026
+- Memorial rebuilt from v0.46 with the portrait and the full biography:
+  Isfahan, the Z-scan, the Kramers-Kronig link, the Consortium, the MECSEL,
+  and the semiconductor cooling that eluded him
+
+## v0.47 — withdrawn, 13 October 2026
+- Released corrupt and should not be used. An edit script searched for a
+  literal string that the file held as an HTML entity; the search returned
+  not-found, the deletion ran backwards from the end of the document, and
+  the file went from 811 KB to 186 KB, losing most of the page
+
+## v0.46 — 13 October 2026
+- In memoriam section for Mansoor Sheik-Bahae added ahead of the premise,
+  with a dedication line under the hero tagline. A dedication is not a tab:
+  it is why the meeting exists, so it opens the page
+- Organizing committee moved up from the foot of the page to sit directly
+  below the speakers, where the reader who has just met fourteen faces wants
+  to know who assembled them
+- Day headings set in uppercase sans, which the quiet serif was losing
+
+## v0.45 — 13 October 2026
+- Portrait rings thickened to 4px with a 2px background-coloured gap between
+  photograph and ring, so the colour is judged against the page rather than
+  against whatever is in the picture
+
+## v0.44 — 13 October 2026
+- Distinct shapes added to the session markers, so identity never rests on
+  colour alone
+- Speaker-card ring colours corrected: they had been set under the old
+  session scheme, which left three speakers in one session wearing three
+  different colours
+
+## v0.43 — 13 October 2026
+- Session palette re-stepped. The old pairs differed only in hue — two teals
+  and two golds — which left hot against warm at ΔE 5.9 for normal vision
+  and 1.5 under protanopia. Separating each pair in lightness as well as hue
+  clears every check
+- Programme rows given a three-level hierarchy — speaker, title, affiliation
+  — matching the poster list
+
+## v0.42 — 13 October 2026
+- Hero gradient lightened. Composited with the veil, the top two stops
+  measured 2.92:1 and 4.43:1 against the navy text; the whole hero now sits
+  between 6.7 and 13.7. White text was not the alternative — it degrades to
+  2.25:1 by the third stop
+- Arash Mafi removed; Christian Schmiegelow and Pengning Chao added with
+  portraits and interests
+- Registration shown as closed from 10 October, with the form kept reachable
+  for late requests
+- Workshop photograph moved out of the midday slot and onto the dinner row;
+  lunch extended to absorb the time
+- Programme populated with real speakers, titles and times; the poster
+  session published as a table
+- "Fourteen invited talks" replaced with a list, counts having gone stale
+  twice
+
+## v0.41 — 24 September 2026
+- Lodging entry now points to the hotel booking code in the registration
+  form, and says plainly that attendees book their own room
+
 ## v0.40 — 23 September 2026
 - carnot.unm.edu now has a valid certificate, so the site's own references
   move to it: og:url (with its trailing slash restored), og:image, the
