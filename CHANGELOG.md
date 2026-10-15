@@ -27,6 +27,11 @@ Bump the version in three places when you change the site:
   coffee break or over lunch; said on the Session VII band, the Day One
   registration row, and a "Working groups" line in practical information
 - Session 0 band notes that the welcome talk sets up the roadmap session
+- The two day columns are equal width. The 1.3:1 split dated from when Day
+  Two was a short sidebar; Session VII made it the densest block on the page
+  and it was wrapping badly in the narrower column
+- Program intro corrected: draft date, the program now closes at 13:45, and
+  the line about talks not yet being assigned to slots is gone
 - Day Two starts at 08:00, matching Day One. Session VI 08:30-10:00, coffee
   10:00, poster-prize talks 10:15, working groups 11:00 and 11:30
 - Session VII gains a 45-minute plenary at 12:00 where the moderators report
