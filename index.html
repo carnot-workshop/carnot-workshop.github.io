@@ -76,9 +76,9 @@
   --bg:#F0F4F7; --surface:#FFFFFF; --surface-2:#E7EEF3;
   --ink:#0A2448; --ink-2:#33506F; --muted:#5F7691; --line:#D2DEE7;
   --hot:#E08400; --hot-soft:#FCE9D2;
-  --warm:#1E7D4C; --warm-soft:#D9EDE2;
+  --warm:#14664F; --warm-soft:#D6EAE0;
   --cool:#2E8CC9; --cool-soft:#DCEBF8;
-  --cold:#0C5A96; --cold-soft:#D6E4F1;
+  --cold:#009CB5; --cold-soft:#D3EAEF;
   --shadow:0 1px 2px rgba(14,26,35,.05),0 8px 24px -12px rgba(14,26,35,.18);
   --silhouette:#0A2448; --glass:#F6A21A;
   --maxw:1120px;
@@ -88,9 +88,9 @@
     --bg:#07131F; --surface:#0E1E2E; --surface-2:#132738;
     --ink:#E9EFF4; --ink-2:#B7CBD9; --muted:#839BAE; --line:#1E3648;
     --hot:#D9AE3C; --hot-soft:#332A12;
-    --warm:#3FA873; --warm-soft:#10291E;
+    --warm:#408F73; --warm-soft:#0E2620;
     --cool:#72B6E6; --cool-soft:#102638;
-    --cold:#2F7FBE; --cold-soft:#0C1E33;
+    --cold:#35C3D2; --cold-soft:#07242B;
     --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.7);
     --silhouette:#041018; --glass:#F6A21A;
   }
@@ -99,9 +99,9 @@
   --bg:#07131F; --surface:#0E1E2E; --surface-2:#132738;
   --ink:#E9EFF4; --ink-2:#B7CBD9; --muted:#839BAE; --line:#1E3648;
   --hot:#D9AE3C; --hot-soft:#332A12;
-  --warm:#3FA873; --warm-soft:#10291E;
+  --warm:#408F73; --warm-soft:#0E2620;
   --cool:#72B6E6; --cool-soft:#102638;
-  --cold:#2F7FBE; --cold-soft:#0C1E33;
+  --cold:#35C3D2; --cold-soft:#07242B;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.7);
   --silhouette:#041018; --glass:#F6A21A;
 }
@@ -115,7 +115,7 @@ body{
 h1,h2,h3{margin:0; text-wrap:balance; font-weight:400}
 p{margin:0}
 a{color:inherit}
-:focus-visible{outline:2px solid var(--cold); outline-offset:3px; border-radius:2px}
+:focus-visible{outline:2px solid #0C5A96; outline-offset:3px; border-radius:2px}
 
 .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px; width:100%}
 .serif{font-family:"Instrument Serif",Georgia,"Times New Roman",serif; font-weight:400}
@@ -228,6 +228,8 @@ section{padding:88px 0}
 .sess-dot{width:9px; height:9px; border-radius:50%; flex:none}
 .sess-t{font-size:13px; font-weight:600; letter-spacing:.01em}
 .sess-n{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--muted); margin-left:auto; white-space:nowrap}
+.sess-ch{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--muted); white-space:nowrap; letter-spacing:.02em}
+.sess-ch b{font-weight:600; color:var(--ink-2)}
 .row{display:grid; grid-template-columns:70px 1fr; gap:14px; padding:9px 22px; border-bottom:1px solid var(--line); align-items:baseline}
 .row:last-child{border-bottom:0}
 .row time{font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--muted); font-variant-numeric:tabular-nums}
@@ -454,6 +456,35 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
 :root[data-theme="dark"] .on-light{display:none}
 :root[data-theme="dark"] .on-dark{display:block}
 @media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+
+.sess{background:#0D1C2E; border-bottom:0; color:#E7EEF5; padding:11px 22px; flex-wrap:wrap; row-gap:3px}
+.sess .sess-n{order:1}
+.sess .sess-grp{order:3; flex-basis:100%; margin:3px 0 0 19px; font-size:12.5px; line-height:1.55; color:#AFC0D2; font-weight:400; display:flex; gap:11px; align-items:flex-start}
+.sess .sess-grp .gm{flex:none; min-width:78px; display:inline-flex; align-items:center; gap:6px; padding-top:1px}
+.sess .sess-grp .gt{min-width:0}
+.sess .sess-grp .mods{display:block; color:#E2EBF4; font-weight:600}
+.sess .sess-grp .sess-sym{margin:0}
+.sess .sess-grp .g{font-family:"IBM Plex Mono",monospace; font-weight:700; color:#FFFFFF; letter-spacing:.06em}
+.sess .sess-grp .mod{color:#E2EBF4; font-weight:600}
+.sess .sess-sub{order:2; flex-basis:100%; margin-left:19px; font-size:12.5px; line-height:1.5; color:#AFC0D2; font-weight:400; max-width:62ch}
+.sess .sess-ch{order:2; flex-basis:100%; white-space:normal; margin-left:19px}
+.sess .sess-t{color:#FFFFFF}
+.sess .sess-n,.sess .sess-ch{color:#9DB1C5}
+.sess .sess-ch b{color:#DCE6F0}
+.sess.evening{background:#13261F; border-top:0}
+.sess.evening .sess-t{color:#FFFFFF}
+.sess-sym{display:inline-flex; align-items:center; gap:6px; flex:none; line-height:0}
+.sess-sym i{width:13px; height:13px; display:block; background:currentColor; border:0; box-sizing:border-box}
+.sess-sym i.sh-circle-o{background:transparent; border:2.5px solid currentColor}
+.row.break{background:var(--surface-2)}
+.row.break .what{font-family:"IBM Plex Mono",monospace; font-size:12.5px; font-weight:500; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-2)}
+.row.break .who{font-family:"IBM Plex Sans",sans-serif; font-size:13px; letter-spacing:0; text-transform:none; color:var(--muted); font-weight:400; margin-top:3px}
+.row.break .ri{color:var(--ink-2); width:16px; height:16px; vertical-align:-3px}
+.sess-sym b.plus{font-family:"IBM Plex Mono",monospace; font-weight:700; font-size:20px; line-height:13px; display:block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sess{background:#1C2F46}
+ :root:not([data-theme="light"]) .sess.evening{background:#1C3528}}
+:root[data-theme="dark"] .sess{background:#1C2F46}
+:root[data-theme="dark"] .sess.evening{background:#1C3528}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="lg" viewBox="0 0 1800 486"><g id="locked-typography" transform="scale(0.5)" aria-label="CARNOT PHOTONIC HEAT ENGINES">
@@ -565,10 +596,10 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
     </div>
     <div class="msb-grid">
       <div class="prose">
-        <p>Carnot 2026 is dedicated to Mansoor Sheik-Bahae, who passed away in July 2023, aged 67. He was born in Isfahan, a descendant of the seventeenth-century polymath Sheikh Bah&#257;&#702;i, and came to the United States to study electrical engineering, taking his doctorate at SUNY Buffalo in 1987. He joined CREOL in its founding year and moved to the University of New Mexico in 1994, rising to Distinguished Professor &mdash; the highest honor UNM gives its faculty &mdash; and becoming the first director of its Optical Science and Engineering program.</p>
-        <p>With Eric Van Stryland and colleagues he invented the <b>Z&#8209;scan</b>: one beam, a moving sample, a detector, and from it the sign and magnitude of a material&rsquo;s optical nonlinearity. It remains the standard measurement, and the two of them shared Optica&rsquo;s <b>R.&nbsp;W. Wood Prize</b> for it in 2012. He then found a link that had been thought impossible &mdash; Kramers&ndash;Kronig relations are linear, so they ought not to connect nonlinear quantities. His move was to linearize the problem by treating <i>nondegenerate</i> absorption, two photons of different frequency, which made nonlinear refraction predictable from two-photon absorption. He was a Fellow of Optica and of SPIE, and a senior member of the IEEE.</p>
-        <p>In 1995 he began working with Richard Epstein on cooling solids with light, and led that effort for the next twenty-seven years, directing the Consortium for Laser Cooling in Solids from 2004 to 2022. His group established Yb:YLF as the material the field now builds on, and in 2022 cooled a load to 125&nbsp;K. He worked out the theory of radiation-balanced lasers, and his group built the first ones; others carried it from there to the first cooling of Yb-doped silica. And when he pulled the mirror stack out of a semiconductor disk laser, he opened a field &mdash; the MECSEL &mdash; that now reaches as far as sodium guide stars.</p>
-        <p>Cooling a semiconductor was something he was deeply passionate about seeing, and he never got the chance. His co-authors called it his unfulfilled dream. One session of this workshop goes straight at that problem. Another continues his work on radiation-balanced lasers. He was a deep thinker, and he went on pondering the fundamental limits of noise, entropy and engine efficiency. He would have loved to be at this workshop with all of us. His presence is missed dearly.</p>
+        <p>Carnot 2026 is dedicated to Mansoor Sheik-Bahae, who passed away in July 2023, aged 67. Born in Isfahan, a descendant of the seventeenth-century polymath Sheikh Bah&#257;&#702;i, Mansoor came to the United States to study electrical engineering, taking his doctorate at SUNY Buffalo in 1987. He joined CREOL in its founding year and moved to the University of New Mexico in 1994, rising to Distinguished Professor &mdash; the highest honor UNM gives its faculty &mdash; and becoming the first director of its Optical Science and Engineering program.</p>
+        <p>With Eric Van Stryland and colleagues, Mansoor invented the <b>Z&#8209;scan</b>: one beam, a moving sample, a detector, and from it the sign and magnitude of a material&rsquo;s optical nonlinearity. It remains the standard measurement, and the two of them shared Optica&rsquo;s <b>R.&nbsp;W. Wood Prize</b> for it in 2012. He then found a link that had been thought impossible &mdash; Kramers&ndash;Kronig relations are linear, so they ought not to connect nonlinear quantities. The way through was to linearize the problem by treating <i>nondegenerate</i> absorption, two photons of different frequency, which made nonlinear refraction predictable from two-photon absorption. A Fellow of Optica and of SPIE, he was also a senior member of the IEEE.</p>
+        <p>In 1995 Mansoor began working with Richard Epstein on cooling solids with light, and led that effort for the next twenty-seven years, directing the Consortium for Laser Cooling in Solids from 2004 to 2022. The group established Yb:YLF as the material the field now builds on, and in 2022 cooled a load to 125&nbsp;K. He worked out the theory of radiation-balanced lasers, and his group built the first ones; others carried it from there to the first cooling of Yb-doped silica. And when he pulled the mirror stack out of a semiconductor disk laser, it opened a field &mdash; the MECSEL &mdash; that now reaches as far as sodium guide stars.</p>
+        <p>Cooling a semiconductor was something he was deeply passionate about seeing, and he never got the chance. His co-authors called it his unfulfilled dream. One session of this workshop goes straight at that problem. Another continues his work on radiation-balanced lasers. A deep thinker, Mansoor never stopped pondering the fundamental limits of noise, entropy and engine efficiency. He would have loved to be at this workshop with all of us. His presence is missed dearly!</p>
         <p style="font-size:14.5px"><a href="https://www.nature.com/articles/s41566-023-01292-z" target="_blank" rel="noopener">Richard Epstein, Denis Seletskiy and Eric Van Stryland, &ldquo;Mansoor Sheik-Bahae (1956&ndash;2023),&rdquo; <i>Nature Photonics</i> <b>17</b>, 833&ndash;834 (2023)</a>.</p>
       </div>
       <figure class="msb-fig">
@@ -846,6 +877,7 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
 <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M4 10h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M17 11.5h1.6a2.4 2.4 0 0 1 0 4.8H17" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 6.6c0-1 .9-1.2.9-2.2M11.5 6.6c0-1 .9-1.2.9-2.2M15 6.6c0-1 .9-1.2.9-2.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
 <symbol id="i-meal" viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 10v11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 3c-1.4 1-2 2.6-2 4.4 0 1.5.7 2.4 2 2.6V3Zm0 7v11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 <symbol id="i-coach" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12.5" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 9.5h18M9 4v5.5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="7" cy="19" r="1.9" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="19" r="1.9" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+<symbol id="i-camera" viewBox="0 0 24 24"><rect x="2.5" y="6.5" width="19" height="13" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 6.5l1.4-2.6h5.2L16 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
 <symbol id="i-dinner" viewBox="0 0 30 24"><path d="M4 3v6a1.8 1.8 0 0 0 3.6 0V3M5.8 9v12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M12.4 3c-1.2.9-1.7 2.3-1.7 3.9 0 1.3.6 2.1 1.7 2.3V3Zm0 6.2V21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><rect x="16.5" y="8" width="12" height="9.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M19.6 8l1.1-2h3.6l1.1 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="22.5" cy="12.8" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
 <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.8"/><path d="M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
 </svg>
@@ -867,58 +899,61 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <div class="days">
       <div class="day">
         <div class="day-head"><h3><svg class="ri" aria-hidden="true"><use href="#i-cal"/></svg>Day One</h3><span>Saturday 24 October</span></div>
-        <div class="row break"><time>08:00</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coffee"/></svg>Registration, arrival, and coffee</div></div>
+        <div class="row break"><time>08:00</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coffee"/></svg>Registration, arrival, and coffee<span class="who">Working-group sign-up sheets are on the desk all day &mdash; for Sunday&rsquo;s Session VII</span></div></div>
 
-        <div class="sess"><span class="sess-t">0 · Welcome</span><span class="sess-n">25 min</span></div>
+        <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-circle-o" style="color:#93A7BB"></i></span><span class="sess-t">0 · Welcome</span><span class="sess-n">25 min</span><span class="sess-sub">Sets up Sunday&rsquo;s roadmap session and how the two working groups will run.</span></div>
         <div class="row"><time>08:35</time><div class="what"><span class="spk">Denis Seletskiy</span><span class="ttl">Meet CARNOT: 2026 and beyond</span><span class="who">University of New Mexico</span></div></div>
 
-        <div class="sess"><span class="sess-t">I · Optical refrigeration — rare earths</span><span class="sess-n">4 &times; 30 min</span></div>
+        <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-tri" style="color:#35C3D2"></i></span><span class="sess-t">I · Optical refrigeration — rare earths</span><span class="sess-ch">Chair: <b>Denis Seletskiy</b> &middot; University of New Mexico</span><span class="sess-n">4 &times; 30 min</span></div>
         <div class="row"><time>09:00</time><div class="what"><span class="spk">Richard Epstein</span><span class="ttl">Early days of optical refrigeration</span><span class="who">Los Alamos National Laboratory (retired)</span></div></div>
         <div class="row"><time>09:30</time><div class="what"><span class="spk">Markus Hehlen</span><span class="ttl">High-purity metal fluorides and rare-earth doped crystals</span><span class="who">Triton Photonics</span></div></div>
         <div class="row break"><time>10:00</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coffee"/></svg>Coffee break (30 min)</div></div>
         <div class="row"><time>10:30</time><div class="what"><span class="spk">Hiroki Tanaka</span><span class="ttl">Optical refrigeration in rare-earth-doped fluoride single crystals: beyond Yb:YLF</span><span class="who">Leibniz Institute for Crystal Growth</span></div></div>
         <div class="row"><time>11:00</time><div class="what"><span class="spk">Michel Digonnet</span><span class="ttl">Anti-Stokes cooling in silicate fibers</span><span class="who">Stanford University</span></div></div>
 
-        <div class="sess"><span class="sess-t">II · Optical refrigeration — semiconductors</span><span class="sess-n">2 &times; 30 min</span></div>
+        <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-tri" style="color:#35C3D2"></i></span><span class="sess-t">II · Optical refrigeration — semiconductors</span><span class="sess-ch">Chair: <b>TBD</b></span><span class="sess-n">2 &times; 30 min</span></div>
         <div class="row"><time>11:30</time><div class="what"><span class="spk">Matt Sheldon</span><span class="ttl">Optical cooling in all-inorganic perovskite nanocrystals</span><span class="who">University of California, Irvine</span></div></div>
         <div class="row"><time>12:00</time><div class="what"><span class="spk">Masaru Kuno</span><span class="ttl">Semiconductor laser cooling using CsPbBr<sub>3</sub> nanocrystals</span><span class="who">University of Notre Dame</span></div></div>
-        <div class="row break"><time>12:30</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-meal"/></svg>Lunch (60 min)<span class="who">Catered on site</span></div></div>
+        <div class="row break"><time>12:30</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-camera"/></svg>Workshop photograph (5 min)<span class="who">On the stage in Rm.&nbsp;1100, in front of the backlit Carnot backdrop &mdash; everyone, please stay in the room</span></div></div>
+        <div class="row break"><time>12:35</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-meal"/></svg>Lunch (55 min)<span class="who">Catered on site</span></div></div>
 
-        <div class="sess"><span class="sess-t">III · Nanostructures and engineered environments</span><span class="sess-n">3 &times; 30 min</span></div>
+        <div class="sess"><span class="sess-sym" aria-hidden="true"><b class="plus" style="color:#35C3D2">+</b></span><span class="sess-t">III · Nanostructures and engineered environments</span><span class="sess-ch">Chair: <b>TBD</b></span><span class="sess-n">3 &times; 30 min</span></div>
         <div class="row"><time>13:30</time><div class="what"><span class="spk">Peter Pauzauskie</span><span class="ttl">Mie-enhanced solid-state laser refrigeration with optically levitated spherical microcavities</span><span class="who">University of Washington</span></div></div>
         <div class="row"><time>14:00</time><div class="what"><span class="spk">Christian Schmiegelow</span><span class="ttl">Engineering electromagnetic environments for laser cooling of solids</span><span class="who">Universidad de Buenos Aires</span></div></div>
         <div class="row"><time>14:30</time><div class="what"><span class="spk">Pengning Chao</span><span class="ttl">Nanophotonic inverse design in service of optical refrigeration</span><span class="who">Maxwell Labs</span></div></div>
 
         <div class="row break"><time>15:00</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coffee"/></svg>Coffee break (30 min)</div></div>
 
-        <div class="sess"><span class="sess-t">IV · High-power and radiation-balanced lasers</span><span class="sess-n">Talk and panel</span></div>
+        <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-tri" style="color:#408F73"></i><i class="sh-tri" style="color:#D9AE3C"></i></span><span class="sess-t">IV · High-power and radiation-balanced lasers</span><span class="sess-ch">Chair: <b>TBD</b></span><span class="sess-n">Talk and panel</span></div>
         <div class="row"><time>15:30</time><div class="what"><span class="spk">Peter Dragic</span><span class="ttl">Fibers and fiber materials for power scaling of RBFLs</span><span class="who">University of Illinois Urbana-Champaign</span></div></div>
         <div class="row"><time>16:00</time><div class="what">Panel discussion (60 min)<span class="who">What limits the power &mdash; and is it the same limit in both directions?</span></div></div>
 
-        <div class="sess"><span class="sess-t">V · Posters and flash talks</span><span class="sess-n">Flash talks and posters</span></div>
+        <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-circle-o" style="color:#93A7BB"></i></span><span class="sess-t">V · Posters and flash talks</span><span class="sess-ch">Chair: <b>TBD</b></span><span class="sess-n">Flash talks and posters</span></div>
         <div class="row"><time>17:00</time><div class="what">Flash talks (30 min)<span class="who">Two minutes and one slide &mdash; each poster presenter introduces their work</span></div></div>
         <div class="row"><time>17:30</time><div class="what">Poster session and light reception (90 min)<span class="who">Light refreshments &mdash; dinner follows</span></div></div>
         <div class="row break"><time>19:00</time><div class="what">Posters stay up<span class="who">Twenty minutes before the coach leaves</span></div></div>
-        <div class="row break"><time>19:20</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coach"/></svg>Coach to the restaurant (15 min)<span class="who">Group bus from the PAIS building, and back afterwards</span></div></div>
+        <div class="row break"><time>19:20</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coach"/></svg>Coach to the restaurant (15 min)<span class="who">Group bus from the PAIS building; returns to the hotel and to PAIS after dinner</span></div></div>
 
         <div class="sess evening"><span class="sess-t">Evening</span></div>
-        <div class="row evening"><time>19:35</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-dinner"/></svg>Workshop dinner<span class="who">Workshop photograph and poster prizes</span></div></div>
+        <div class="row evening"><time>19:35</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-dinner"/></svg>Workshop dinner<span class="who">Poster prizes and photographs</span></div></div>
       </div>
 
       <div class="side">
         <div class="day">
           <div class="day-head"><h3><svg class="ri" aria-hidden="true"><use href="#i-cal"/></svg>Day Two</h3><span>Sunday 25 October</span></div>
-          <div class="row break"><time>09:00</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coffee"/></svg>Registration, arrival, and coffee</div></div>
-          <div class="sess"><span class="sess-t">VI · Thermodynamics and broadband sources</span><span class="sess-n">3 &times; 30 min</span></div>
-          <div class="row"><time>09:30</time><div class="what">Talk 1<span class="who">Speaker and title to be announced</span></div></div>
-          <div class="row"><time>10:00</time><div class="what"><span class="spk">Hanieh Fattahi</span><span class="ttl">Solar-pumped radiation-balanced laser</span><span class="who">Max Planck Institute for the Science of Light</span></div></div>
-          <div class="row"><time>10:30</time><div class="what"><span class="spk">Sushrut Ghonge</span><span class="ttl">Optical cooling with incoherent light</span><span class="who">Saint Mary&rsquo;s College</span></div></div>
-          <div class="row break"><time>11:00</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coffee"/></svg>Coffee</div></div>
-          <div class="row"><time>11:15</time><div class="what">Talks from the poster prize winners<span class="who">15 minutes each</span></div></div>
-          <div class="row"><time>12:00</time><div class="what">Working groups, first round (30 min)<span class="who">In two adjacent classrooms &mdash; 1 &middot; Laser cooling, with Kuno and Pauzauskie &nbsp;|&nbsp; 2 &middot; Radiation-balanced and high-power laser design, with Seletskiy and Bixler</span></div></div>
-          <div class="row"><time>12:30</time><div class="what">Working groups, second round (30 min)<span class="who">Everyone switches groups</span></div></div>
-          <div class="row break"><time>13:00</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-meal"/></svg>Working lunch<span class="who">Group leads report back in the second half</span></div></div>
-          <div class="row"><time>14:00</time><div class="what">Lab tours / adjourn<span class="who">Optional tours of UNM laboratories · the workshop ends at 15:00</span></div></div>
+          <div class="row break"><time>08:00</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coffee"/></svg>Registration, arrival, and coffee</div></div>
+          <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-circle" style="color:#35C3D2"></i><i class="sh-circle" style="color:#408F73"></i></span><span class="sess-t">VI · Thermodynamics and broadband sources</span><span class="sess-ch">Chair: <b>TBD</b></span><span class="sess-n">3 &times; 30 min</span></div>
+          <div class="row"><time>08:30</time><div class="what">Talk 1<span class="who">Speaker and title to be announced</span></div></div>
+          <div class="row"><time>09:00</time><div class="what"><span class="spk">Hanieh Fattahi</span><span class="ttl">Solar-pumped radiation-balanced laser</span><span class="who">Max Planck Institute for the Science of Light</span></div></div>
+          <div class="row"><time>09:30</time><div class="what"><span class="spk">Sushrut Ghonge</span><span class="ttl">Optical cooling with incoherent light</span><span class="who">Saint Mary&rsquo;s College</span></div></div>
+          <div class="row break"><time>10:00</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coffee"/></svg>Coffee break (15 min)</div></div>
+          <div class="row"><time>10:15</time><div class="what">Talks from the poster prize winners<span class="who">15 minutes each</span></div></div>
+          <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-circle-o" style="color:#93A7BB"></i></span><span class="sess-t">VII &middot; A roadmap for the photonic engine community</span><span class="sess-n">2 &times; 30 min + report</span><span class="sess-grp"><span class="gm"><b class="g">A</b><span class="sess-sym" aria-hidden="true"><i class="sh-tri" style="color:#35C3D2"></i><i class="sh-circle" style="color:#35C3D2"></i><b class="plus" style="color:#35C3D2">+</b></span></span><span class="gt">Laser cooling<b class="mods">Moderators: Masaru Kuno, Peter Pauzauskie</b></span></span><span class="sess-grp"><span class="gm"><b class="g">B</b><span class="sess-sym" aria-hidden="true"><i class="sh-tri" style="color:#408F73"></i><i class="sh-circle" style="color:#408F73"></i><i class="sh-tri" style="color:#D9AE3C"></i></span></span><span class="gt">Radiation-balanced and high-power lasers<b class="mods">Moderators: Denis Seletskiy, Joel Bixler</b></span></span><span class="sess-sub">A discussion panel on where photonic engines go next and what the field needs to get there, split across Working groups A and B. The moderators then present each group&rsquo;s summary and take further input before lunch. <b>Sign-up sheets are at the registration desk on Saturday &mdash; join one group, both, or neither.</b></span></div>
+          <div class="row"><time>11:00</time><div class="what">Working groups A and B &mdash; first round (30 min)<span class="who">Running in parallel, in two adjacent classrooms</span></div></div>
+          <div class="row"><time>11:30</time><div class="what">Second round (30 min)<span class="who">Both groups run again &mdash; switch rooms, stay where you are, or sit this one out</span></div></div>
+          <div class="row"><time>12:00</time><div class="what">Moderators report back (45 min)<span class="who">Each group&rsquo;s summary, then open discussion &mdash; where the two halves meet</span></div></div>
+          <div class="row break"><time>12:45</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-meal"/></svg>Lunch (60 min)<span class="who">Catered on site</span></div></div>
+          <div class="row"><time>13:45</time><div class="what">Lab tours / adjourn<span class="who">Optional tours of UNM laboratories · the workshop ends at 15:00</span></div></div>
         </div>
 
         <div class="themes">
@@ -1004,6 +1039,7 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <li><span>Hotel to PAIS</span><div>The free 777 Express bus, or a 25-minute walk.</div></li>
         <li><span>Calendar</span><div><a href="carnot-2026.ics" download>Add the workshop to your calendar</a> (.ics)</div></li>
         <li><span>Registration</span><div>Free to attend; closed 10 October 2026. <a href="#register">Late requests</a>.</div></li>
+        <li><span>Working groups</span><div>Sunday&rsquo;s discussion panel splits into two groups. Sign-up sheets are at the registration desk on Saturday &mdash; join one, both, or neither.</div></li>
       </ul>
       <div class="maplinks">
         <a href="https://www.google.com/maps/search/?api=1&amp;query=210%20Yale%20Blvd%20NE%2C%20Albuquerque%2C%20NM%2087106" target="_blank" rel="noopener">PAIS on the map</a>

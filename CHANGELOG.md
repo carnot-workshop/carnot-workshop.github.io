@@ -11,6 +11,65 @@ Bump the version in three places when you change the site:
   Closes "with all of us"
 - Practical-information row still advertised registration as open; now reads
   "Free to attend; closed 10 October 2026" and links to late requests
+- Session bands are dark panels now, so the program has visible structure
+  when scrolling two days of rows. Each carries a "Chair: TBD" slot and the
+  session's own sign at 13px, in the physics convention rather than a plain
+  dot: triangle for a coherent pump, + for density of states, open circle
+  where there is no flavor. Session VI shows two circles, cold and balanced,
+  because it genuinely holds both. Bands lighten in dark mode so they stay
+  distinct from the rows
+- Sunday's working groups are back under their premise: a new Session VII,
+  "A roadmap for the photonic engine community", states the question and
+  then bifurcates into the two groups, which are now rounds of one session
+  rather than two free-standing rows. The working lunch is where the two
+  drafts merge
+- Sign-up is paper sheets on the Saturday registration desk, filled in at a
+  coffee break or over lunch; said on the Session VII band, the Day One
+  registration row, and a "Working groups" line in practical information
+- Session 0 band notes that the welcome talk sets up the roadmap session
+- Day Two starts at 08:00, matching Day One. Session VI 08:30-10:00, coffee
+  10:00, poster-prize talks 10:15, working groups 11:00 and 11:30
+- Session VII gains a 45-minute plenary at 12:00 where the moderators report
+  back and take further input; lunch follows at 12:45 and is no longer a
+  working lunch. Lab tours move to 13:45, still ending at 15:00
+- Session VII reframed as a discussion panel, in Denis's wording, and
+  attendance is now join one group, both, or neither rather than everyone
+  sitting in both
+- Working groups A and B each show three signs, the incoherent circle among
+  them, and the moderators sit on their own line under the group name
+- Session VII lists moderators per group rather than a chair: A, laser
+  cooling, under the cold triangle and plus; B, radiation-balanced and
+  high-power, under the balanced and net-heating triangles. The round rows
+  no longer repeat the roster
+- Breaks, meals, the coach and the photograph now read as a different kind
+  of row: tinted band, label in uppercase mono, detail line left in the page
+  sans so it stays prose. They were set in the same type as the talks and
+  disappeared into them
+- Session 0 has no chair line
+- Dinner row reads "Poster prizes and photographs" so it no longer collides
+  with the 12:30 workshop photograph
+- Seletskiy named as chair of Session I, with affiliation; the chair line
+  sits on its own row under the session title
+- Session IV carries a second triangle in Carnot orange: the session holds
+  net-heating high-power lasers as well as radiation-balanced ones
+- Balanced green deepened to #14664F (dark mode #408F73). The weak link in
+  the palette was green against orange under protanopia, at dE 11.4; it is
+  now 18.2, and the worst pair anywhere in the three-color set went from
+  11.4 to 18.2. Page contrast improved too, 4.75 to 6.39. Lighter green
+  measured worse on every axis
+- Net cooling now carries the Carnot logo teal (#009CB5) instead of a
+  generic blue. Clears 3:1 against the page and separates from green and
+  orange by dE 15+ in normal, deuteranopic, protanopic and tritanopic
+  vision - the old blue collapsed to 5.9 against green under tritanopia.
+  Focus ring pinned to the previous #0C5A96 so it keeps its 6.7:1
+- Coach row says where the bus goes: from the PAIS building, returning to
+  the hotel and to PAIS after dinner
+- Memorial names Mansoor four times instead of leaning on "he" and "his" -
+  once per paragraph, at the sentence that carries the weight. Closing
+  exclamation mark restored on "His presence is missed dearly!"
+- Workshop photograph added at 12:30, five minutes on the Rm. 1100 stage
+  in front of the backlit Carnot backdrop; the five minutes come out of
+  lunch, which now runs 12:35 to 13:30. New camera icon in the sprite
 
 ## v0.68 — 15 October 2026
 - Memorial rewritten so Sheik-Bahae does the verbs: he worked out the
