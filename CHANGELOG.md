@@ -26,10 +26,12 @@ Bump the version in three places when you change the site:
 - Sign-up is paper sheets on the Saturday registration desk, filled in at a
   coffee break or over lunch; said on the Session VII band, the Day One
   registration row, and a "Working groups" line in practical information
-- Session 0 band notes that the welcome talk sets up the roadmap session
-- The two day columns are equal width. The 1.3:1 split dated from when Day
-  Two was a short sidebar; Session VII made it the densest block on the page
-  and it was wrapping badly in the narrower column
+- Session 0 band reads "Welcome, how the two days run, and the premise
+  behind Sunday's roadmap session"
+- Day columns set to 1.4:1. Day One holds the long talk titles and twice the
+  rows; Day Two's titles are short and its session panel caps its own line
+  length, so the extra width was going to the column that needed it less.
+  This also halves the ragged gap at the foot of the two columns
 - Program intro corrected: draft date, the program now closes at 13:45, and
   the line about talks not yet being assigned to slots is gone
 - Day Two starts at 08:00, matching Day One. Session VI 08:30-10:00, coffee
@@ -67,6 +69,12 @@ Bump the version in three places when you change the site:
   orange by dE 15+ in normal, deuteranopic, protanopic and tritanopic
   vision - the old blue collapsed to 5.9 against green under tritanopia.
   Focus ring pinned to the previous #0C5A96 so it keeps its 6.7:1
+- Evening tightened: poster session ends 19:00, coach departs 19:05, dinner
+  19:20. Seven posters over ninety minutes does not need a twenty-minute
+  buffer, and a bus that leaves on time is its own announcement
+- The 19:00 "Posters stay up" row is gone - a leftover from an earlier
+  schedule, and it read as an instruction when it was only a gap. The poster
+  session simply ends at 19:00 and the coach row says it boards from 19:05
 - Coach row says where the bus goes: from the PAIS building, returning to
   the hotel and to PAIS after dinner
 - Memorial names Mansoor four times instead of leaning on "he" and "his" -
