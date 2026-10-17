@@ -36,9 +36,9 @@ Bump the version in three places when you change the site:
   the line about talks not yet being assigned to slots is gone
 - Day Two starts at 08:00, matching Day One. Session VI 08:30-10:00, coffee
   10:00, poster-prize talks 10:15, working groups 11:00 and 11:30
-- Session VII gains a 45-minute plenary at 12:00 where the moderators report
-  back and take further input; lunch follows at 12:45 and is no longer a
-  working lunch. Lab tours move to 13:45, still ending at 15:00
+- Session VII gains a 30-minute plenary at 12:00 where the moderators report
+  back and take further input; lunch follows at 12:30 and is no longer a
+  working lunch. Lab tours move to 13:30, still ending at 15:00
 - Session VII reframed as a discussion panel, in Denis's wording, and
   attendance is now join one group, both, or neither rather than everyone
   sitting in both
