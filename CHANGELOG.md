@@ -76,8 +76,8 @@ Bump the version in three places when you change the site:
 - Poster size stated: 3 x 4 feet, portrait or landscape, mounting material
   provided. Said in the poster section and in practical information
 - Flash talks cut to 15 minutes (seven presenters at two minutes) and the
-  poster session to 75. Everything after moves up: posters 17:15-18:30,
-  coach 18:35, dinner 18:50. Two lines promising posters "all evening" are
+  poster session to 85. Posters 17:15-18:40, coach 18:45, dinner 19:00 on
+  the hour at the restaurant. Two lines promising posters "all evening" are
   gone, since the room empties at 18:30
 - Evening tightened: poster session ends 19:00, coach departs 19:05, dinner
   19:20. Seven posters over ninety minutes does not need a twenty-minute
