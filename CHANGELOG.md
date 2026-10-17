@@ -69,6 +69,8 @@ Bump the version in three places when you change the site:
   orange by dE 15+ in normal, deuteranopic, protanopic and tritanopic
   vision - the old blue collapsed to 5.9 against green under tritanopia.
   Focus ring pinned to the previous #0C5A96 so it keeps its 6.7:1
+- Digonnet carries two marks, cold and balanced, both triangles: his work
+  spans anti-Stokes cooling and radiation-balanced silica fiber lasers
 - Poster size stated: 3 x 4 feet, portrait or landscape, mounting material
   provided. Said in the poster section and in practical information
 - Evening tightened: poster session ends 19:00, coach departs 19:05, dinner
