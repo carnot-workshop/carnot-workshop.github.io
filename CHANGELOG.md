@@ -3,6 +3,21 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
+## v0.70 — 19 October 2026
+- Richard Epstein's affiliation is now "University of New Mexico", on his
+  speaker card and his program row. His own abstract heads Department of
+  Physics and Astronomy, UNM, and he registered as "Retired", not LANL.
+  Confirmed with him via Denis. The memorial and medal pages keep the Los
+  Alamos history, which is a different claim
+- Four talk titles replaced by the titles on the submitted abstracts, which
+  supersede the tentative program entries: Epstein "Can you give me a
+  second?", Hehlen "What's heating my cooler? Impurity-driven parasitic
+  heating in rare-earth-doped solids", Tanaka "Crystalline materials for
+  optical refrigeration", Kuno "Solid state laser cooling". Set in the
+  site's sentence case; the book prints each author's own capitalization
+- Nine abstracts still outstanding; remaining titles and the session chairs
+  follow as they arrive. The running list is carnot/website_todo.md
+
 ## v0.69 — 15 October 2026
 - Memorial closing paragraph replaced with Denis's own wording, lightly
   edited: the semiconductor he never got to see cooled, the unfulfilled
@@ -118,7 +133,7 @@ Bump the version in three places when you change the site:
   across. Nothing downstream shifts
 - Session IV renamed "High-power and radiation-balanced lasers"; Session V
   renamed "Posters and flash talks", since "New work" implied the rest of
-  the programme was stale; Sunday's "Contributed talks" renamed "Talks from
+  the program was stale; Sunday's "Contributed talks" renamed "Talks from
   the poster prize winners", which is what they are
 - Seventh poster added (Brandon Stone, UNM CHTM, thermal noise in SiN
   microring resonators); Chao's title updated to the registered wording
@@ -128,19 +143,19 @@ Bump the version in three places when you change the site:
 
 ## v0.64 — 14 October 2026
 - `+` replaces `⊥` for density-of-states work and joins the key as a third
-  row, shown in all three colours. The two empty cells are deliberate: a
+  row, shown in all three colors. The two empty cells are deliberate: a
   balanced laser or a high-power source could be built by engineering
   absorption and extraction, and nobody here is doing it
 
 ## v0.63 — 14 October 2026
-- Net-heating colour brightened to #E08400, closer to the logo amber. The
+- Net-heating color brightened to #E08400, closer to the logo amber. The
   logo's own #F6A21A measures 2.03:1 against this background and cannot be
-  used for small marks; the brighter orange also improves colour-vision
+  used for small marks; the brighter orange also improves color-vision
   separation from the green, from ΔE 8.5 to 11.5 under protanopia
 
 ## v0.62 — 14 October 2026
 - Density-of-states work moved out of the pump axis, where it had been
-  labelled "either pump" — a label that described what the work is not.
+  labeled "either pump" — a label that described what the work is not.
   It is a different variable, and now says so
 
 ## v0.61 — 14 October 2026
@@ -150,14 +165,14 @@ Bump the version in three places when you change the site:
 
 ## v0.60 — 14 October 2026
 - Sunday working groups relocated from PAIS 1110 to two adjacent classrooms,
-  corrected in the schedule, the venue list and the programme caption
+  corrected in the schedule, the venue list and the program caption
 
 ## v0.59 — 14 October 2026
 - Hexagon introduced for work that acts on emission and so is indifferent to
   the pump
 
 ## v0.58 — 14 October 2026
-- Net-heating colour moved off mustard and toward the brand orange
+- Net-heating color moved off mustard and toward the brand orange
 
 ## v0.57 — 14 October 2026
 - Key rebuilt as a matrix, heat direction across and pump down, so the two
@@ -165,9 +180,9 @@ Bump the version in three places when you change the site:
   coherent, a beam being directional and broadband emission not
 
 ## v0.56 — 14 October 2026
-- Badges re-encoded to carry physics rather than session: colour for the
-  direction of heat flow, shape for the pump. Session colour dropped from
-  the schedule bands, because the same four colours meaning "session" there
+- Badges re-encoded to carry physics rather than session: color for the
+  direction of heat flow, shape for the pump. Session color dropped from
+  the schedule bands, because the same four colors meaning "session" there
   and "physics" on the cards was the collision that prompted this
 
 ## v0.55 — 14 October 2026
@@ -230,23 +245,23 @@ Bump the version in three places when you change the site:
 - Day headings set in uppercase sans, which the quiet serif was losing
 
 ## v0.45 — 13 October 2026
-- Portrait rings thickened to 4px with a 2px background-coloured gap between
-  photograph and ring, so the colour is judged against the page rather than
+- Portrait rings thickened to 4px with a 2px background-colored gap between
+  photograph and ring, so the color is judged against the page rather than
   against whatever is in the picture
 
 ## v0.44 — 13 October 2026
 - Distinct shapes added to the session markers, so identity never rests on
-  colour alone
-- Speaker-card ring colours corrected: they had been set under the old
+  color alone
+- Speaker-card ring colors corrected: they had been set under the old
   session scheme, which left three speakers in one session wearing three
-  different colours
+  different colors
 
 ## v0.43 — 13 October 2026
 - Session palette re-stepped. The old pairs differed only in hue — two teals
   and two golds — which left hot against warm at ΔE 5.9 for normal vision
   and 1.5 under protanopia. Separating each pair in lightness as well as hue
   clears every check
-- Programme rows given a three-level hierarchy — speaker, title, affiliation
+- Program rows given a three-level hierarchy — speaker, title, affiliation
   — matching the poster list
 
 ## v0.42 — 13 October 2026
@@ -260,7 +275,7 @@ Bump the version in three places when you change the site:
   for late requests
 - Workshop photograph moved out of the midday slot and onto the dinner row;
   lunch extended to absorb the time
-- Programme populated with real speakers, titles and times; the poster
+- Program populated with real speakers, titles and times; the poster
   session published as a table
 - "Fourteen invited talks" replaced with a list, counts having gone stale
   twice
@@ -314,7 +329,7 @@ Bump the version in three places when you change the site:
   an orphan. "New Mexico", "Notre Dame" and "Maxwell Labs" are bound with
   non-breaking spaces so the narrower cards never split them
 - UNM Physics & Astronomy's official logo replaces the text lockup in the
-  sponsor panel, on a white tile so the mark itself is not recoloured
+  sponsor panel, on a white tile so the mark itself is not recolored
 - Triton Photonics added under "With support from", linked to
   tritonphotonics.com, and to the schema.org sponsor list. Shown as a name
   until the logo file is in hand
@@ -410,7 +425,7 @@ Bump the version in three places when you change the site:
   viewport narrows) so the fourth photograph no longer orphans onto its own row
 
 ## v0.26 — 9 September 2026
-- The PAIS 1010 photograph moved up into the empty space beside the programme
+- The PAIS 1010 photograph moved up into the empty space beside the program
   heading, where it does more work: it is the room every item on the timetable
   happens in
 - Removed from "The building" gallery rather than shown twice on one page, so
@@ -572,7 +587,7 @@ Bump the version in three places when you change the site:
 ## v0.5 — 24 August 2026
 - Logo replaced with the true vector master (brand/carnot-logo.svg); the hero,
   nav mark and footer are now resolution-independent
-- Brand colours corrected to the official values: navy #0A2448, teal #13A8B7,
+- Brand colors corrected to the official values: navy #0A2448, teal #13A8B7,
   amber #F6A21A (previously sampled approximations from a raster)
 - Footer no longer ships two themed PNG lockups — one vector inherits the theme
 - Favicon regenerated from the vector mark
@@ -605,3 +620,25 @@ Bump the version in three places when you change the site:
 - Initial site: hero, premise, tentative program, speakers with portraits,
   poster session, venue and travel, organizing committee, sponsors
 - Published unlisted at https://carnot-workshop.github.io/
+
+## v0.70 — 21 October 2026
+
+Site brought back in step with the printed program (Rev43 of the Technical
+Program). The two day blocks are no longer hand-maintained: `sync_site.py`
+regenerates them from `book/content.json` and the talk titles from
+`book/build_report.json`, so the site cannot drift from print again.
+
+- Markus Hehlen withdrawn; his speaker card and his 09:30 Saturday slot are gone.
+- Eli Yablonovitch added as a speaker (UC Berkeley) and at 09:00 on Sunday.
+- Talk titles replaced by the submitted abstract titles throughout.
+- Saturday retimed: 60-minute lunch at 12:10, afternoon moved up 20 minutes,
+  flash talks 16:45, bus 17:00, posters 17:20 at the restaurant, dinner 19:00.
+- Sunday: working groups in PAIS 1140 and 1160; sign-up sheets move to Sunday
+  morning; joint discussion with the moderators' summaries at 12:00.
+- "Coach" is now "bus" throughout.
+- New portrait for Max Gardner.
+- Parking added to the venue list: Cornell Parking Structure rates with the
+  $28 daily maximum, the accessible bay, and which streets are closed to cars.
+- The campus map from the printed program is embedded in the venue section.
+- Poster list: Iotsi Bueno Ries's title updated; the hard count of seven removed.
+- carnot-2026.ics description updated (rooms, and posters at the restaurant).

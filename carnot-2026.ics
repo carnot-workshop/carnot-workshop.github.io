@@ -5,16 +5,18 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:carnot-2026@carnot-workshop.github.io
-DTSTAMP:20261015T000000Z
-SEQUENCE:2
+DTSTAMP:20261021T000000Z
+SEQUENCE:3
 DTSTART:20261024T140000Z
 DTEND:20261025T210000Z
 SUMMARY:Carnot 2026 — Workshop on Photonic Heat Engines
 DESCRIPTION:A two-day workshop on optical refrigeration\, radiation-balance
  d lasers\, and high-power laser source development. Single track\, discuss
- ion-focused. Talks and the panel discussion are in PAIS 1100\; lunch\, pos
- ters and discussion are in PAIS 1110. Program\, speakers and travel detail
- s: https://carnot.unm.edu/
+ ion-focused. Talks and the panel discussion are in PAIS 1100\; lunch and d
+ iscussion are in PAIS 1110\; the Sunday working groups are in PAIS 1140 an
+ d 1160. The poster session and the workshop dinner are at La Fonda del Bos
+ que\, from 17:20 on Saturday. Program\, speakers and travel details: https
+ ://carnot.unm.edu/
 LOCATION:PAIS 1100\, PAIS Building\, 210 Yale Boulevard NE\, Albuquerque\, 
  NM 87106
 URL:https://carnot.unm.edu/
