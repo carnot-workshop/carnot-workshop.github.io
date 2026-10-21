@@ -3,6 +3,32 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
+## v0.72 — 21 October 2026
+
+Site brought back in step with the printed program (Rev43 of the Technical
+Program). The two day blocks are no longer hand-maintained: `sync_site.py`
+regenerates them from `book/content.json` and the talk titles from
+`book/build_report.json`, so the site cannot drift from print again.
+
+- Markus Hehlen withdrawn; his speaker card and his 09:30 Saturday slot are gone.
+- Eli Yablonovitch added as a speaker (UC Berkeley) and at 09:00 on Sunday.
+- Talk titles replaced by the submitted abstract titles throughout.
+- Saturday retimed: 60-minute lunch at 12:10, afternoon moved up 20 minutes,
+  flash talks 16:45, bus 17:00.
+- Sunday: working groups in PAIS 1140 and 1160; sign-up sheets move to Sunday
+  morning; joint discussion with the moderators' summaries at 12:00.
+- "Coach" is now "bus" throughout.
+- New portrait for Max Gardner.
+- Parking added to the venue list: Cornell Parking Structure rates with the
+  $28 daily maximum, the accessible bay, and which streets are closed to cars.
+- The campus map from the printed program is embedded in the venue section.
+- Poster list: Iotsi Bueno Ries's title updated; the hard count of seven removed.
+- Saturday evening retimed again: poster session 17:20–18:30 (70 min),
+  workshop dinner 18:30.
+- Posters are landscape only now, 4 × 3 feet; the boards cannot take portrait.
+- carnot-2026.ics description updated (rooms, dinner hour, posters at the
+  restaurant); SEQUENCE bumped to 3 so existing calendar entries update.
+
 ## v0.70 — 19 October 2026
 - Richard Epstein's affiliation is now "University of New Mexico", on his
   speaker card and his program row. His own abstract heads Department of
@@ -620,25 +646,3 @@ Bump the version in three places when you change the site:
 - Initial site: hero, premise, tentative program, speakers with portraits,
   poster session, venue and travel, organizing committee, sponsors
 - Published unlisted at https://carnot-workshop.github.io/
-
-## v0.70 — 21 October 2026
-
-Site brought back in step with the printed program (Rev43 of the Technical
-Program). The two day blocks are no longer hand-maintained: `sync_site.py`
-regenerates them from `book/content.json` and the talk titles from
-`book/build_report.json`, so the site cannot drift from print again.
-
-- Markus Hehlen withdrawn; his speaker card and his 09:30 Saturday slot are gone.
-- Eli Yablonovitch added as a speaker (UC Berkeley) and at 09:00 on Sunday.
-- Talk titles replaced by the submitted abstract titles throughout.
-- Saturday retimed: 60-minute lunch at 12:10, afternoon moved up 20 minutes,
-  flash talks 16:45, bus 17:00, posters 17:20 at the restaurant, dinner 19:00.
-- Sunday: working groups in PAIS 1140 and 1160; sign-up sheets move to Sunday
-  morning; joint discussion with the moderators' summaries at 12:00.
-- "Coach" is now "bus" throughout.
-- New portrait for Max Gardner.
-- Parking added to the venue list: Cornell Parking Structure rates with the
-  $28 daily maximum, the accessible bay, and which streets are closed to cars.
-- The campus map from the printed program is embedded in the venue section.
-- Poster list: Iotsi Bueno Ries's title updated; the hard count of seven removed.
-- carnot-2026.ics description updated (rooms, and posters at the restaurant).
