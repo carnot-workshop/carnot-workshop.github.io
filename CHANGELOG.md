@@ -28,6 +28,10 @@ regenerates them from `book/content.json` and the talk titles from
 - Posters are landscape only now, 4 × 3 feet; the boards cannot take portrait.
 - carnot-2026.ics description updated (rooms, dinner hour, posters at the
   restaurant); SEQUENCE bumped to 3 so existing calendar entries update.
+- "Tentative program" is now "Program", and the draft stamp reads
+  "Final, 21 October 2026" — the book has gone to the printer.
+- check_times.py added: validates every clock time in the book, the site and
+  the .ics against the schedule in book/content.json.
 
 ## v0.70 — 19 October 2026
 - Richard Epstein's affiliation is now "University of New Mexico", on his
