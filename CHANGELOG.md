@@ -3,7 +3,7 @@
 Bump the version in three places when you change the site:
 `index.html` header comment, the footer line (`class="ver"`), and here.
 
-## v0.72 — 21 October 2026
+## v0.73 — 21 October 2026
 
 Site brought back in step with the printed program (Rev43 of the Technical
 Program). The two day blocks are no longer hand-maintained: `sync_site.py`
@@ -32,6 +32,8 @@ regenerates them from `book/content.json` and the talk titles from
   "Final, 21 October 2026" — the book has gone to the printer.
 - check_times.py added: validates every clock time in the book, the site and
   the .ics against the schedule in book/content.json.
+- Schmiegelow's talk title updated to the submitted abstract:
+  "Environment engineering and electrodynamic traps for laser cooling".
 
 ## v0.70 — 19 October 2026
 - Richard Epstein's affiliation is now "University of New Mexico", on his
