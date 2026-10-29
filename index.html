@@ -15,7 +15,7 @@
 <!-- ===== SITE VERSION =====================================================
      Bump this on every content change, and update the matching line in the
      footer (search: class="ver") and the entry in CHANGELOG.md.
-     CURRENT: v0.73 — 21 October 2026
+     CURRENT: v0.84 — 24 October 2026
      ====================================================================== -->
 <title>Carnot 2026 Workshop</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,8 +56,7 @@
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "url": "https://forms.gle/A5s9j5ocgsVA1uSt9",
+    "availability": "https://schema.org/SoldOut",
     "validFrom": "2026-09-12T00:00:00-06:00"
   },
   "sponsor": [
@@ -193,6 +192,18 @@ a{color:inherit}
 .hero-note b{font-weight:600}
 .hero-note a{color:inherit; text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px}
 @media (max-width:640px){.hero-note{border-radius:14px; align-items:flex-start; padding:12px 16px}.hero-note i{margin-top:7px}}
+.hero-news{grid-column:1 / -1; grid-row:6; display:block;
+  background:rgba(255,255,255,.66); border:1px solid rgba(10,36,72,.16);
+  border-radius:16px; padding:16px 20px; font-size:15px;
+  box-shadow:0 2px 10px -4px rgba(10,32,56,.25); backdrop-filter:blur(2px)}
+.hero-news h2{font-family:inherit; font-size:12px; font-weight:600; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--ink-2); margin:0 0 10px}
+.hero-news ul{list-style:none; margin:0; padding:0; display:grid; gap:7px}
+.hero-news li{display:flex; gap:10px; align-items:flex-start; line-height:1.5}
+.hero-news li i{width:9px; height:9px; margin-top:7px; border-radius:50%;
+  background:var(--glass); flex:none; display:block}
+.hero-news b{font-weight:600}
+.hero-news a{color:inherit; text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px}
 
 /* ---------- SECTIONS ---------- */
 section{padding:88px 0}
@@ -236,6 +247,10 @@ section{padding:88px 0}
 .row .what{font-size:15px}
 .row .who{display:block; font-size:13.5px; color:var(--muted); margin-top:2px}
 .row .spk{display:block; font-weight:500; color:var(--ink); font-size:15px}
+.row .tno{font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:500;
+          color:var(--muted); letter-spacing:.04em; margin-left:7px}
+.pno{font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:500; font-style:normal;
+     color:var(--muted); letter-spacing:.04em; margin-right:8px}
 .row .ttl{display:block; color:var(--ink-2); font-size:15px; line-height:1.45; margin-top:1px}
 .row.break .what{color:var(--muted); font-size:14px}
 
@@ -506,6 +521,46 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
 .mapfig{margin:22px 0 0}
 .mapfig figcaption{font-size:14px; color:var(--muted); line-height:1.5; margin-top:10px}
 .mapfig .mk{display:inline-grid; place-items:center; width:17px; height:17px;border-radius:50%; color:#fff; font-size:11px; font-weight:600; vertical-align:1px}
+/* venue: prose, then a photo strip, then the facts in two columns */
+.venue-stack{display:block}
+.venue-intro{columns:2; column-gap:44px; margin-top:14px}
+.venue-intro p{break-inside:avoid; margin-bottom:12px}
+.venue-strip{display:grid; grid-template-columns:repeat(5,1fr); gap:16px; margin:28px 0 4px}
+.venue-strip figure{margin:0}
+.venue-strip img{display:block; width:100%; height:168px; object-fit:cover;
+  border:1px solid var(--line); border-radius:3px; background:var(--surface-2)}
+.venue-strip figcaption{font-size:12.5px; line-height:1.45; color:var(--muted); margin-top:8px}
+.vlist.vcols{columns:2; column-gap:52px; border-top:0; margin-top:30px}
+.vlist.vcols li{break-inside:avoid; border-top:1px solid var(--line); border-bottom:0}
+.venue-stack .mapfig{margin-top:26px}
+@media (max-width:900px){
+  .venue-intro{columns:1}
+  .venue-strip{grid-template-columns:1fr 1fr}
+  .venue-strip img{height:150px}
+  .vlist.vcols{columns:1}
+}
+/* small screens: the schematic map pans instead of shrinking to 5px type */
+@media (max-width:760px){
+  .mapscroll{overflow-x:auto; -webkit-overflow-scrolling:touch; margin-bottom:6px}
+  .mapscroll .cmap{min-width:780px}
+  .mapfig figcaption::after{content:" Drag the map sideways to see the whole block.";
+    color:var(--muted); font-style:italic}
+}
+/* the physics key is a legend, not fine print */
+@media (max-width:620px){.phys-key .kx,.phys-key .ky{font-size:10.5px}}
+/* the section nav is how you move around a page this long: keep it on phones */
+@media (max-width:900px){
+  .navlinks{display:flex; font-size:12.5px; gap:15px; overflow-x:auto;
+    scrollbar-width:none; -webkit-overflow-scrolling:touch; max-width:100%; padding-bottom:3px}
+  .navlinks::-webkit-scrollbar{display:none}
+  .navlinks a{white-space:nowrap}
+  .topbar{flex-wrap:wrap; row-gap:10px; padding:18px 20px 0}
+}
+/* laptops and tablets: five photographs across gets cramped below ~1150px */
+@media (max-width:1150px) and (min-width:761px){
+  .venue-strip{grid-template-columns:repeat(3,1fr)}
+  .venue-strip img{height:150px}
+}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="lg" viewBox="0 0 1800 486"><g id="locked-typography" transform="scale(0.5)" aria-label="CARNOT PHOTONIC HEAT ENGINES">
@@ -574,7 +629,7 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <a href="#sponsors">Sponsors</a>
         <a href="#program">Program</a>
         <a href="#posters">Posters</a>
-        <a href="#register">Register</a>
+        <a href="#photos">Photos</a>
         <a href="#venue">Venue</a>
       </nav>
     </div>
@@ -603,7 +658,16 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <div class="fact"><span class="fact-k">City</span><span class="fact-v">Albuquerque, New Mexico</span></div>
         <div class="fact"><span class="fact-k">Format</span><span class="fact-v">Single track, discussion-focused</span></div>
       </div>
-      <p class="hero-note"><i aria-hidden="true"></i><span><b>Registration closed 10 October</b> &mdash; late requests still welcome. <a href="#register">Register here</a>. Questions: <a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a>.</span></p>
+      <div class="hero-news">
+        <h2>Announcements</h2>
+        <ul>
+          <li><i aria-hidden="true"></i><span><b>Carnot 2026 is complete.</b> Thank you to everyone who came to Albuquerque, and to the speakers, the poster presenters and the jury.</span></li>
+          <li><i aria-hidden="true"></i><span><b>Exit survey.</b> If you attended, please do not forget to fill out the survey sent to all of you on Monday, 26 October. Thank you to everyone who has already completed it. Your answers help us make the next event even better, and it takes two to three minutes. If the email did not reach you, write to <a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a> and we will send it.</span></li>
+          <li><i aria-hidden="true"></i><span><b>Photos.</b> We will soon be uploading pictures from the workshop. Once posted, you will find them under the <a href="#photos">Photos</a> tab above.</span></li>
+          <li><i aria-hidden="true"></i><span><b>Program.</b> The final technical program is available as a <a href="program/Carnot2026_Technical_Program.pdf">PDF</a>.</span></li>
+          <li><i aria-hidden="true"></i><span><b>Carnot 2027</b> will be held at the University of Notre Dame in South Bend, Indiana. Dates and the call for participation will be announced here. Stay tuned.</span></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -912,6 +976,7 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <span>Invited talks across six sessions</span><span>Flash talks</span><span>Poster session, with prizes</span>
         <span>Panel discussion</span><span>Community roadmap and funding session</span><span>Laboratory tours</span>
       </div>
+      <p class="prose" style="margin-top:14px"><a href="program/Carnot2026_Technical_Program.pdf">Download the final program (PDF, 36 pages)</a>.</p>
     </div>
       <figure class="prog-shot"><img src="photos/pais-1010.jpg" alt="The workshop room in the PAIS building" width="1000" height="562" loading="lazy">
         <figcaption>Talks, flash talks and the panel discussion are in PAIS 1100, the 200-seat auditorium. PAIS 1110 next door takes lunch, the posters and anyone who wants to carry on an argument; the Sunday working groups split into PAIS 1140 and PAIS 1160.</figcaption></figure>
@@ -925,30 +990,29 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-circle-o" style="color:#93A7BB"></i></span><span class="sess-t">0 · Welcome</span><span class="sess-n">25 min</span><span class="sess-sub">Welcome, how the two days run, and the premise behind Sunday’s roadmap session.</span></div>
         <div class="row"><time>08:35</time><div class="what"><span class="spk">Denis Seletskiy</span><span class="ttl">Meet CARNOT: 2026 and beyond</span><span class="who">University of New Mexico</span></div></div>
 
-        <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-tri" style="color:#35C3D2"></i></span><span class="sess-t">I · Optical refrigeration — rare earths</span><span class="sess-ch">Chair: <b>Denis Seletskiy · University of New Mexico</span></b><span class="sess-n">3 &times; 30 min</span></div>
-        <div class="row"><time>09:00</time><div class="what"><span class="spk">Richard Epstein</span><span class="ttl">Can you give me a second?</span><span class="who">University of New Mexico</span></div></div>
-        <div class="row"><time>09:30</time><div class="what"><span class="spk">Hiroki Tanaka</span><span class="ttl">Crystalline materials for optical refrigeration</span><span class="who">Leibniz Institute for Crystal Growth</span></div></div>
-        <div class="row"><time>10:00</time><div class="what"><span class="spk">Michel Digonnet</span><span class="ttl">Anti-Stokes fluorescence cooling in silicate fibers</span><span class="who">Stanford University</span></div></div>
+        <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-tri" style="color:#35C3D2"></i></span><span class="sess-t">I · Optical refrigeration — rare earths</span><span class="sess-ch">Chair: <b>Denis Seletskiy · University of New Mexico</b></span><span class="sess-n">3 &times; 30 min</span></div>
+        <div class="row"><time>09:00</time><div class="what"><span class="spk">Richard Epstein<i class="tno">I-1</i></span><span class="ttl">Early days of optical refrigeration</span><span class="who">University of New Mexico</span></div></div>
+        <div class="row"><time>09:30</time><div class="what"><span class="spk">Hiroki Tanaka<i class="tno">I-2</i></span><span class="ttl">Optical refrigeration in rare-earth-doped fluoride single crystals: beyond Yb:YLF</span><span class="who">Leibniz Institute for Crystal Growth</span></div></div>
+        <div class="row"><time>10:00</time><div class="what"><span class="spk">Michel Digonnet<i class="tno">I-3</i></span><span class="ttl">Anti-Stokes fluorescence cooling in silicate fibers</span><span class="who">Stanford University</span></div></div>
         <div class="row break"><time>10:30</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coffee"/></svg>Coffee break (30 min)</div></div>
 
-        <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-tri" style="color:#35C3D2"></i></span><span class="sess-t">II · Optical refrigeration — semiconductors</span><span class="sess-ch">Chair: <b>TBD</span></b><span class="sess-n">2 &times; 30 min</span></div>
-        <div class="row"><time>11:00</time><div class="what"><span class="spk">Matt Sheldon</span><span class="ttl">Quantifying optical cooling in perovskite nanocrystal ensembles with photothermal deflection spectroscopy</span><span class="who">University of California, Irvine</span></div></div>
-        <div class="row"><time>11:30</time><div class="what"><span class="spk">Masaru Kuno</span><span class="ttl">Solid state laser cooling</span><span class="who">University of Notre Dame</span></div></div>
+        <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-tri" style="color:#35C3D2"></i></span><span class="sess-t">II · Optical refrigeration — semiconductors</span><span class="sess-ch">Chair: <b>Hiroki Tanaka · Leibniz IKZ, Berlin</b></span><span class="sess-n">2 &times; 30 min</span></div>
+        <div class="row"><time>11:00</time><div class="what"><span class="spk">Matt Sheldon<i class="tno">II-1</i></span><span class="ttl">Optical cooling in all-inorganic perovskite nanocrystals</span><span class="who">University of California, Irvine</span></div></div>
+        <div class="row"><time>11:30</time><div class="what"><span class="spk">Masaru Kuno<i class="tno">II-2</i></span><span class="ttl">Semiconductor laser cooling using CsPbBr3 nanocrystals</span><span class="who">University of Notre Dame</span></div></div>
         <div class="row break"><time>12:00</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-camera"/></svg>Workshop photograph (10 min)<span class="who">In the Lecture Hall, PAIS 1100</span></div></div>
         <div class="row break"><time>12:10</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-meal"/></svg>Lunch (60 min)<span class="who">Catered on site</span></div></div>
 
-        <div class="sess"><span class="sess-sym" aria-hidden="true"><b class="plus" style="color:#35C3D2">+</b></span><span class="sess-t">III · Nanostructures and engineered environments</span><span class="sess-ch">Chair: <b>TBD</span></b><span class="sess-n">3 &times; 30 min</span></div>
-        <div class="row"><time>13:10</time><div class="what"><span class="spk">Peter Pauzauskie</span><span class="ttl">Solid state laser refrigeration of nanoscale quantum sensors</span><span class="who">University of Washington</span></div></div>
-        <div class="row"><time>13:40</time><div class="what"><span class="spk">Christian Schmiegelow</span><span class="ttl">Environment engineering and electrodynamic traps for laser cooling</span><span class="who">Universidad de Buenos Aires</span></div></div>
-        <div class="row"><time>14:10</time><div class="what"><span class="spk">Pengning Chao</span><span class="ttl">Nanophotonic inverse design for optical refrigeration</span><span class="who">Maxwell Labs</span></div></div>
+        <div class="sess"><span class="sess-sym" aria-hidden="true"><b class="plus" style="color:#35C3D2">+</b></span><span class="sess-t">III · Nanostructures and engineered environments</span><span class="sess-ch">Chair: <b>Masaru Kuno · University of Notre Dame</b></span><span class="sess-n">3 &times; 30 min</span></div>
+        <div class="row"><time>13:10</time><div class="what"><span class="spk">Peter Pauzauskie<i class="tno">III-1</i></span><span class="ttl">Mie-enhanced solid-state laser refrigeration with optically levitated spherical microcavities</span><span class="who">University of Washington</span></div></div>
+        <div class="row"><time>13:40</time><div class="what"><span class="spk">Christian Schmiegelow<i class="tno">III-2</i></span><span class="ttl">Engineering electromagnetic environments for laser cooling of solids</span><span class="who">Universidad de Buenos Aires</span></div></div>
+        <div class="row"><time>14:10</time><div class="what"><span class="spk">Pengning Chao<i class="tno">III-3</i></span><span class="ttl">Nanophotonic inverse design for optical refrigeration</span><span class="who">Maxwell Labs</span></div></div>
         <div class="row break"><time>14:40</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coffee"/></svg>Coffee break (30 min)</div></div>
 
-        <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-tri" style="color:#408F73"></i><i class="sh-tri" style="color:#D9AE3C"></i></span><span class="sess-t">IV · High-power and radiation-balanced lasers</span><span class="sess-ch">Chair: <b>TBD</span></b><span class="sess-n">Talk and panel</span></div>
-        <div class="row"><time>15:10</time><div class="what"><span class="spk">Peter Dragic</span><span class="ttl">Fibers and fiber materials for power scaling of radiation balanced fiber lasers</span><span class="who">University of Illinois Urbana-Champaign</span></div></div>
-        <div class="row"><time>15:40</time><div class="what">Panel discussion (60 min)<span class="who">Where cryogenic optical refrigerators are actually needed, how far radiation-balanced and high-power lasers can be pushed, and what the two problems have in common</span></div></div>
-        <div class="row break"><time>16:40</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coffee"/></svg>Break (5 min)</div></div>
+        <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-tri" style="color:#408F73"></i><i class="sh-tri" style="color:#D9AE3C"></i></span><span class="sess-t">IV · High-power and radiation-balanced lasers</span><span class="sess-ch">Chair: <b>Peter Pauzauskie · University of Washington</b></span><span class="sess-n">Talk and panel</span></div>
+        <div class="row"><time>15:10</time><div class="what"><span class="spk">Peter Dragic<i class="tno">IV-1</i></span><span class="ttl">Fibers and fiber materials for power scaling of RBFLs</span><span class="who">University of Illinois Urbana-Champaign</span></div></div>
+        <div class="row"><time>15:40</time><div class="what">Panel discussion (60 min)<span class="ttl">Moderator: Joel Bixler &#183; Air Force Office of Scientific Research<br>Panelists: Richard Epstein &#183; Ricky Gibson &#183; Peter Dragic &#183; Pengning Chao</span><span class="who">Where cryogenic optical refrigerators are actually needed, how far radiation-balanced and high-power lasers can be pushed, and what the two problems have in common</span></div></div>
 
-        <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-circle-o" style="color:#93A7BB"></i></span><span class="sess-t">V · Flash talks</span><span class="sess-ch">Chair: <b>TBD</span></b><span class="sess-n">2 min each</span></div>
+        <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-circle-o" style="color:#93A7BB"></i></span><span class="sess-t">V · Flash talks</span><span class="sess-ch">Chair: <b>Denis Seletskiy · University of New Mexico</b></span><span class="sess-n">2 min each</span></div>
         <div class="row"><time>16:45</time><div class="what">Flash talks (15 min)<span class="who">Two minutes and one slide each — the posters follow at the restaurant</span></div></div>
         <div class="row break"><time>17:00</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coach"/></svg>Bus to the restaurant (20 min)<span class="who">Board outside PAIS on Redondo Drive at 17:00; a fifteen-minute ride to La Fonda del Bosque, arriving 17:20. Returns to the hotel and to PAIS after dinner</span></div></div>
 
@@ -962,19 +1026,20 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
           <div class="day-head"><h3><svg class="ri" aria-hidden="true"><use href="#i-cal"/></svg>Day Two</h3><span>Sunday 25 October</span></div>
           <div class="row break"><time>08:00</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coffee"/></svg>Registration, arrival, and coffee</div></div>
 
-          <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-circle" style="color:#35C3D2"></i><i class="sh-circle" style="color:#408F73"></i></span><span class="sess-t">VI · Thermodynamics and broadband sources</span><span class="sess-ch">Chair: <b>TBD</span></b><span class="sess-n">3 &times; 30 min</span></div>
-          <div class="row"><time>08:30</time><div class="what"><span class="spk">Hanieh Fattahi</span><span class="ttl">Solar-pumped radiation-balanced laser</span><span class="who">Max Planck Institute for the Science of Light</span></div></div>
-          <div class="row"><time>09:00</time><div class="what"><span class="spk">Eli Yablonovitch</span><span class="ttl">Opto-electronic thermodynamics</span><span class="who">University of California, Berkeley</span></div></div>
-          <div class="row"><time>09:30</time><div class="what"><span class="spk">Sushrut Ghonge</span><span class="ttl">Thermodynamics of photoluminescence-based cooling with incoherent photon sources</span><span class="who">Saint Mary’s College</span></div></div>
-          <div class="row break"><time>10:00</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coffee"/></svg>Coffee break (15 min)</div></div>
-          <div class="row"><time>10:15</time><div class="what">Talks from the poster prize winners<span class="who">15 minutes each</span></div></div>
+          <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-circle" style="color:#35C3D2"></i><i class="sh-circle" style="color:#408F73"></i></span><span class="sess-t">VI · Thermodynamics and broadband sources</span><span class="sess-ch">Chair: <b>Pengning Chao · Maxwell Labs</b></span><span class="sess-n">3 &times; 30 min</span></div>
+          <div class="row"><time>08:30</time><div class="what"><span class="spk">Hanieh Fattahi<i class="tno">VI-1</i></span><span class="ttl">Solar-pumped radiation-balanced laser</span><span class="who">Max Planck Institute for the Science of Light</span></div></div>
+          <div class="row"><time>09:00</time><div class="what"><span class="spk">Eli Yablonovitch<i class="tno">VI-2</i></span><span class="ttl">Opto-electronic thermodynamics</span><span class="who">University of California, Berkeley</span></div></div>
+          <div class="row"><time>09:30</time><div class="what"><span class="spk">Sushrut Ghonge<i class="tno">VI-3</i></span><span class="ttl">Optical cooling with incoherent light</span><span class="who">Saint Mary’s College</span></div></div>
+          <div class="row break"><time>10:00</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-coffee"/></svg>Coffee break (30 min)</div></div>
+          <div class="row"><time>10:30</time><div class="what">Talks from the poster prize winners<span class="who">10 minutes each</span></div></div>
 
           <div class="sess"><span class="sess-sym" aria-hidden="true"><i class="sh-circle-o" style="color:#93A7BB"></i></span><span class="sess-t">VII · A roadmap for the photonic engine community</span><span class="sess-n">2 &times; 30 min + joint discussion</span><span class="sess-sub">A discussion panel on where photonic engines go next and what the field needs to get there, split across Working groups A and B. The moderators then present each group’s summary and take further input before lunch. Sign-up sheets are at the registration desk on Sunday morning — join one group, both, or neither.</span></div>
           <div class="row"><time>11:00</time><div class="what">Working groups A and B — first round (30 min)<span class="who">Running in parallel, in Rm 1140 and Rm 1160</span></div></div>
           <div class="row"><time>11:30</time><div class="what">Second round (30 min)<span class="who">Both groups run again — switch rooms, stay where you are, or sit this one out</span></div></div>
           <div class="row"><time>12:00</time><div class="what">Joint discussion with summary from moderators (30 min)<span class="who">Each group reports, then the two halves meet</span></div></div>
           <div class="row break"><time>12:30</time><div class="what"><svg class="ri" aria-hidden="true"><use href="#i-meal"/></svg>Lunch (60 min)<span class="who">Catered on site</span></div></div>
-          <div class="row"><time>13:30</time><div class="what">Lab tours / adjourn<span class="who">Optional tours of UNM laboratories · the workshop ends at 15:00</span></div></div>
+          <div class="row"><time>13:30</time><div class="what">Closing remarks (10 min)<span class="who">Thanks, and where CARNOT goes next</span></div></div>
+          <div class="row"><time>13:40</time><div class="what">Lab tours / adjourn<span class="who">Optional tours of UNM laboratories · the workshop ends at 15:00</span></div></div>
         </div>
 
         <div class="themes">
@@ -1002,56 +1067,52 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
       <p>The posters come from the speakers&rsquo; groups and from UNM. Every poster gets a two-minute flash talk on the Saturday afternoon, before the bus leaves for the restaurant, and the boards go up at La Fonda del Bosque, where the session runs from 17:20 until dinner at 18:30. Print at <b>4&nbsp;&times;&nbsp;3&nbsp;feet, landscape</b> &mdash; the boards cannot take portrait. Mounting material is provided.</p>
     </div>
     <ul class="vlist">
-      <li><span>Jadin Coddens &amp; MaryElizabeth Cain</span><div>Revealing nonradiative relaxation in CsPbBr<sub>3</sub> nanocrystals using photothermal ratiometric quantum yield measurements<br><i style="opacity:.7">Saint Mary&rsquo;s College</i></div></li>
-      <li><span>Emma Brass</span><div>Defining the parameter space for perovskite optical cooling with photothermal deflection spectroscopy<br><i style="opacity:.7">University of California, Irvine</i></div></li>
-      <li><span>Sankhya Hirani</span><div>Mie resonance-enhanced optical refrigeration<br><i style="opacity:.7">University of Washington</i></div></li>
-      <li><span>Andy Feng</span><div>Solid-state laser refrigeration of nanoscale quantum sensors<br><i style="opacity:.7">University of Washington</i></div></li>
-      <li><span>Trevor Rubin</span><div>High-power narrow-linewidth semiconductor lasers for igniting artificial guide stars<br><i style="opacity:.7">University of New Mexico / femtoQ</i></div></li>
-      <li><span>Brandon Stone</span><div>Managing thermal noise in SiN coupled microring resonators<br><i style="opacity:.7">University of New Mexico, CHTM</i></div></li>
-      <li><span>Iotsi Bueno Ries</span><div>Optical cooling of Yb:YLF with incoherent and partially coherent light<br><i style="opacity:.7">University of New Mexico / femtoQ</i></div></li>
+      <li><span><i class="pno">P1</i>Jadin Coddens &amp; MaryElizabeth Cain</span><div>Revealing nonradiative relaxation in CsPbBr<sub>3</sub> nanocrystals using photothermal ratiometric quantum yield measurements<br><i style="opacity:.7">Saint Mary&rsquo;s College</i></div></li>
+      <li><span><i class="pno">P2</i>Emma Brass</span><div>Defining the parameter space for perovskite optical cooling with photothermal deflection spectroscopy<br><i style="opacity:.7">University of California, Irvine</i></div></li>
+      <li><span><i class="pno">P3</i>Sankhya Hirani</span><div>Mie resonance-enhanced optical refrigeration<br><i style="opacity:.7">University of Washington</i></div></li>
+      <li><span><i class="pno">P4</i>Andy Feng</span><div>Solid-state laser refrigeration of nanoscale quantum sensors<br><i style="opacity:.7">University of Washington</i></div></li>
+      <li><span><i class="pno">P5</i>Trevor Rubin</span><div>High-power narrow-linewidth semiconductor lasers for igniting artificial guide stars<br><i style="opacity:.7">University of New Mexico / femtoQ</i></div></li>
+      <li><span><i class="pno">P6</i>Brandon Stone</span><div>Managing thermal noise in SiN coupled microring resonators<br><i style="opacity:.7">University of New Mexico, CHTM</i></div></li>
+      <li><span><i class="pno">P7</i>Iotsi Bueno Ries</span><div>Optical cooling of Yb:YLF with incoherent and partially coherent light<br><i style="opacity:.7">University of New Mexico / femtoQ</i></div></li>
     </ul>
-    <p class="prose">Poster prizes &mdash; sponsored by <a href="#sponsors">SELA Photonics, Triton Photonics and the UNM Department of Physics and Astronomy</a> &mdash; are awarded at the workshop dinner, and the winners give short talks on Sunday morning.</p>
+    <p class="prose">Poster prizes &mdash; sponsored by <a href="#sponsors">SELA Photonics, Triton Photonics and the UNM Department of Physics and Astronomy</a> &mdash; are awarded at the workshop dinner, and the winners give short talks on Sunday morning. Our thanks to the poster prize jury: <b>Hanieh Fattahi</b>, <b>Christian Schmiegelow</b> and <b>Masaru Kuno</b>.</p>
   </div>
 </section>
 
-<section id="register">
+
+
+<section id="photos">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Registration</p>
-      <h2>Registration has closed</h2>
-      <p>Registration closed on 10 October 2026. If you would like to attend and have not registered, write to us &mdash; we may still be able to accommodate you.</p>
-    </div>
-    <div class="reg-grid">
-      <div>
-        <ul class="reg-list">
-          <li><span>Cost</span><div>Free for all attendees, including the catered lunch, the poster reception and the workshop dinner.</div></li>
-          <li><span>Deadline</span><div>Closed 10 October 2026. Late requests are considered case by case &mdash; write to the address below.</div></li>
-          <li><span>Posters</span><div>Students and postdocs are especially encouraged. No abstract is needed to register &mdash; we write to poster presenters in early October. Every poster gets a two-minute flash talk, and prizes are awarded at the dinner.</div></li>
-          <li><span>Questions</span><div><a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a></div></li>
-        </ul>
-      </div>
-      <div class="reg-card">
-        <span class="free">Closed &mdash; late requests considered</span>
-        <h3>Late registration</h3>
-        <p style="font-size:15px; color:var(--ink-2); line-height:1.55">Three minutes. Name, affiliation, which days you are coming, dietary requirements, and whether you are bringing a poster. No abstract needed.</p>
-        <a class="reg-btn" href="https://forms.gle/A5s9j5ocgsVA1uSt9" target="_blank" rel="noopener">Open the registration form</a>
-        <p class="reg-note">Opens in a Google Form. No account required &mdash; you will get a copy of your answers by email, and you can edit them later if your plans change.</p>
-      </div>
+      <p class="eyebrow">Photos</p>
+      <h2>Pictures from the workshop</h2>
+      <p>We are sorting through the photographs from the two days. They will be posted here shortly. If you took pictures you would like included, send them to <a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a>.</p>
     </div>
   </div>
 </section>
 
 <section id="venue">
-  <div class="wrap venue-grid">
-    <div>
-      <p class="eyebrow">Venue and travel</p>
+  <div class="wrap venue-stack">
+    <p class="eyebrow">Venue and travel</p>
       <h2 class="serif" style="font-size:clamp(31px,4.4vw,46px); line-height:1.1; margin-bottom:16px">Albuquerque, late October</h2>
-      <div class="prose">
+      <div class="prose venue-intro">
         <p>The workshop meets in the Physics, Astronomy and Interdisciplinary Sciences building on the University of New Mexico main campus. Los Alamos, Sandia, the Air Force Research Laboratory and UNM's Center for High Technology Materials are all within reach of the same room — which is why the field's center of gravity has moved here.</p>
         <p>Painters moved to New Mexico for the light. At 5,300 feet the air is thin and dry, the blue overhead is harder than seems reasonable, and shadows keep their edges. It is a fitting place to spend two days arguing about photons.</p>
         <p>Late October is the best of it &mdash; seventies by day, forties after dark, aspen gold still holding on the Sandias, and balloons going up at dawn.</p>
       </div>
-      <ul class="vlist">
+    <div class="venue-strip">
+      <figure><img src="photos/pais-exterior.jpg" alt="The PAIS building at the University of New Mexico" width="1500" height="843" loading="lazy">
+        <figcaption>PAIS from Redondo Drive. The courtyard entrance is on the far side.</figcaption></figure>
+      <figure><img src="photos/nm-sunset.jpg" alt="Cholla cactus silhouetted against an orange and pink desert sunset" width="760" height="1013" loading="lazy">
+          <figcaption>Cholla at sunset. The light is what brought the painters, and it is still the best argument for coming.</figcaption></figure>
+      <figure><img src="photos/nm-ristras.jpg" alt="Chile ristras hanging above crates of fruit at a roadside stand" width="860" height="645" loading="lazy">
+          <figcaption>Ristras at a roadside stand. Red or green is not a rhetorical question here.</figcaption></figure>
+      <figure><img src="photos/nm-sandias.jpg" alt="Cholla in the foreground with the Sandia Mountains lit gold behind" width="860" height="645" loading="lazy">
+          <figcaption>The Sandias at the end of the day, from the edge of town. The range runs the whole eastern side of the city.</figcaption></figure>
+      <figure><img src="photos/nm-mesa.jpg" alt="Red sandstone bluff above juniper and pinyon" width="860" height="645" loading="lazy">
+          <figcaption>Red rock and juniper. The drive out of the valley in almost any direction looks like this.</figcaption></figure>
+    </div>
+    <ul class="vlist vcols">
         <li><span>Venue</span><div>Physics, Astronomy and Interdisciplinary Science (PAIS) Building<br>210 Yale Boulevard NE, Albuquerque, NM 87106<br>University of New Mexico main campus &mdash; northeast corner of Yale and Redondo</div></li>
         <li><span>Rooms</span><div>PAIS 1100 &mdash; a 200-seat auditorium with a large screen: all talks and the panel discussion.<br>PAIS 1110 &mdash; lunch and discussion through the day.<br>PAIS 1140 and PAIS 1160 &mdash; the classrooms, for the Sunday working groups.</div></li>
         
@@ -1061,12 +1122,11 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
         <li><span>Hotel to PAIS</span><div>The free 777 Express bus, or a 25-minute walk.</div></li>
         <li><span>Parking</span><div><b>Cornell Parking Structure</b>, on Redondo Drive east of Popejoy Hall, is the nearest paid visitor parking and is enforced around the clock.<br>$1.75 per half hour, with a $28 daily maximum, so a full day of the workshop costs $28. Arriving after 3&nbsp;pm, the flat rate is $10. Pay stations take cards; cash only on the third floor, and they give no change. ParkMobile zone 512.<br>Accessible parking is closer: a marked bay on Redondo immediately east of PAIS. It needs a state-issued placard or plate, and the posted fee still applies.<br>Yale and Cornell are both closed to traffic on campus &mdash; Yale north of Redondo, Cornell north of Central, past the Bookstore &mdash; so Redondo is the road to use.</div></li>
         <li><span>Calendar</span><div><a href="carnot-2026.ics" download>Add the workshop to your calendar</a> (.ics)</div></li>
-        <li><span>Registration</span><div>Free to attend; closed 10 October 2026. <a href="#register">Late requests</a>.</div></li>
+        <li><span>Exit survey</span><div>Emailed to everyone who attended on 26 October. Two to three minutes.</div></li>
         <li><span>Working groups</span><div>Sunday&rsquo;s discussion panel splits into two groups. Sign-up sheets are at the registration desk on Sunday morning &mdash; join one, both, or neither.</div></li>
         <li><span>Posters</span><div>4&nbsp;&times;&nbsp;3&nbsp;feet, <b>landscape only</b> &mdash; the boards cannot take portrait. Mounting material is provided; bring the poster, not a stand.</div></li>
       </ul>
-
-      <figure class="mapfig"><svg class="cmap" viewBox="0 0 1160 730" role="img"
+    <figure class="mapfig"><div class="mapscroll"><svg class="cmap" viewBox="0 0 1160 730" role="img"
  aria-label="Locator map: PAIS between the pedestrian mall and Redondo Drive, north of Central Avenue">
  <rect width="1160" height="730" fill="#FBFCFD"/>
  <!-- Central Ave (US 66) -->
@@ -1161,29 +1221,13 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
   <text x="0" y="32" class="cm-nn">N</text>
  </g>
  <text x="940" y="722" class="cm-note" text-anchor="end">Schematic, not to scale</text>
-</svg><figcaption><span class="mk" style="background:#009CB5">1</span> PAIS is entered through the courtyard, which opens west onto the pedestrian mall. <span class="mk" style="background:#E08400">2</span> The bus leaves at 17:00 on Saturday from the stop on Redondo Drive, west of Yale, for the poster session and dinner. <span class="mk" style="background:#14664F">3</span> Arriving by ART: the <b>UNM/Popejoy</b> station is in the Central median in front of the UNM Bookstore. Leave the platform at its east end and cross Central at the Cornell signal, then north on Cornell to Redondo, west along Redondo, and right into the mall and the courtyard &mdash; about seven minutes.</figcaption></figure>
-      <div class="maplinks">
+</svg></div><figcaption><span class="mk" style="background:#009CB5">1</span> PAIS is entered through the courtyard, which opens west onto the pedestrian mall. <span class="mk" style="background:#E08400">2</span> The bus leaves at 17:00 on Saturday from the stop on Redondo Drive, west of Yale, for the poster session and dinner. <span class="mk" style="background:#14664F">3</span> Arriving by ART: the <b>UNM/Popejoy</b> station is in the Central median in front of the UNM Bookstore. Leave the platform at its east end and cross Central at the Cornell signal, then north on Cornell to Redondo, west along Redondo, and right into the mall and the courtyard &mdash; about seven minutes.</figcaption></figure>
+    <div class="maplinks">
         <a href="https://www.google.com/maps/search/?api=1&amp;query=210%20Yale%20Blvd%20NE%2C%20Albuquerque%2C%20NM%2087106" target="_blank" rel="noopener">PAIS on the map</a>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=Hotel%20Parq%20Central%2C%20806%20Central%20Ave%20SE%2C%20Albuquerque%2C%20NM%2087102" target="_blank" rel="noopener">Hotel Parq Central</a>
         <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Hotel%20Parq%20Central%2C%20806%20Central%20Ave%20SE%2C%20Albuquerque%2C%20NM%2087102&amp;destination=210%20Yale%20Blvd%20NE%2C%20Albuquerque%2C%20NM%2087106" target="_blank" rel="noopener">Directions, hotel to PAIS</a>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Fonda%20del%20Bosque%2C%201701%204th%20St%20SW%2C%20Albuquerque%2C%20NM%2087102" target="_blank" rel="noopener">Dinner venue on the map</a>
       </div>
-    </div>
-    <div class="venue-art">
-      <figure><img src="photos/pais-exterior.jpg" alt="The PAIS building at the University of New Mexico" width="1500" height="843" loading="lazy"></figure>
-      <div class="venue-pair">
-        <figure><img src="photos/nm-sunset.jpg" alt="Cholla cactus silhouetted against an orange and pink desert sunset" width="760" height="1013" loading="lazy">
-          <figcaption>Cholla at sunset. The light is what brought the painters, and it is still the best argument for coming.</figcaption></figure>
-        <figure><img src="photos/nm-ristras.jpg" alt="Chile ristras hanging above crates of fruit at a roadside stand" width="860" height="645" loading="lazy">
-          <figcaption>Ristras at a roadside stand. Red or green is not a rhetorical question here.</figcaption></figure>
-      </div>
-      <div class="venue-pair">
-        <figure><img src="photos/nm-sandias.jpg" alt="Cholla in the foreground with the Sandia Mountains lit gold behind" width="860" height="645" loading="lazy">
-          <figcaption>The Sandias at the end of the day, from the edge of town. The range runs the whole eastern side of the city.</figcaption></figure>
-        <figure><img src="photos/nm-mesa.jpg" alt="Red sandstone bluff above juniper and pinyon" width="860" height="645" loading="lazy">
-          <figcaption>Red rock and juniper. The drive out of the valley in almost any direction looks like this.</figcaption></figure>
-      </div>
-    </div>
   </div>
   <div class="wrap">
     <p class="subhead2">The building</p>
@@ -1224,9 +1268,9 @@ footer{border-top:1px solid var(--line); padding:44px 0 60px; color:var(--muted)
       <p class="legal">&copy; 2026 Carnot Workshop. Photographs of PAIS and New Mexico by Denis Seletskiy. Speaker portraits reproduced with permission and remain the property of their respective owners.</p>
     </div>
     <div style="text-align:right">
-      <p>Program and speaker list are provisional.</p>
+      <p>Program and speaker list are final.</p>
       <p><a href="mailto:carnot.workshop@gmail.com">carnot.workshop@gmail.com</a> &middot; <a href="https://www.linkedin.com/events/7503264660901507072/" target="_blank" rel="noopener">LinkedIn event</a></p>
-      <p class="ver">Version 0.73 &middot; 21 October 2026</p>
+      <p class="ver">Version 0.84 &middot; 29 October 2026</p>
     </div>
   </div>
 </footer>
